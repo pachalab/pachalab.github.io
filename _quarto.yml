@@ -15,7 +15,6 @@ website:
   title: ""
   description: "Postdoctoral fellow, Department of Molecular Biology, UT Southwestern Medical Center — immunology and heart regeneration."
   site-url: https://www.stephanie-vargas.com
-  favicon: images/favicon.png   # raster fallback; richer set in _includes/head-icons.html
   search: false
   navbar:
     background: dark

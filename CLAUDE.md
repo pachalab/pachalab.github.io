@@ -75,6 +75,17 @@ and research prose on the site is a draft pending her sign-off.
 - Icons are Bootstrap Icons (`<i class="bi bi-envelope">`), whose CSS ships
   with Quarto's Bootstrap bundle. `{{< bi … >}}` is **not** a built-in
   shortcode and renders as literal text.
+- The site icon is `images/favicon.svg`, a two-layer trace (red silhouette +
+  white interior) of the anatomical-heart icon from the Google Site, with the
+  original's grey blocks and white background removed. `.ico` and
+  apple-touch-icon are rendered from the same vector. Source and the rejected
+  candidates are in `_notes/favicon-options/`; `heart-cut.png` there is the
+  cleaned raster the trace came from.
+- Icon `<link>` tags live in `_includes/head-icons.html`. Quarto's `favicon:`
+  key is deliberately unset — it emits a second `rel="icon"`, and two
+  competing ones make the browser's choice ambiguous.
+- `images/` is listed under `project.resources` because the icon files are
+  referenced only from raw header HTML, which Quarto does not scan.
 - `project.render` is limited to `"*.qmd"`. Without it Quarto renders
   `TODO.md` into a public `docs/TODO.html`.
 - `_notes/` holds the design spec, the implementation plan, and
