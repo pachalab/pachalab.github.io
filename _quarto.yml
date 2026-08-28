@@ -6,6 +6,8 @@ project:
     - CNAME
     - .nojekyll
     - files/
+    - "!z_old/**"
+
 
 website:
   title: "Stephanie Vargas Aguilar"
