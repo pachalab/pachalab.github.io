@@ -39,21 +39,37 @@ Leave any Google-Sites verification TXT records; they are harmless.
 - [ ] Verify `https://www.stephanie-vargas.com` and the bare apex both serve
 - [ ] After ~7 days of overlap, unpublish the Google Site
 
-## 3. Content still missing
+## 3. Hero image — the design depends on it
 
-- [ ] Google Scholar profile URL → add to the contact row in `index.qmd`
+The home page is a full-viewport hero. Its background is currently a teal
+gradient with a heart outline, which is a **placeholder**. The design is
+modelled on <https://www.alaingdlb.com/>, where the hero carries a striking
+scientific image.
+
+- [ ] Ask Stephanie for a high-resolution image she is free to publish:
+      confocal / immunofluorescence / histology of heart tissue or
+      macrophages. Ideally 2400px wide or more, landscape.
+- [ ] Drop it in as `images/hero.jpg` and swap the placeholder in
+      `styles.scss` (`.hero { background: ... }`) — a one-line change; the
+      commented-out `background-image` line is already there.
+- [ ] Confirm the hero question with her: "How does the immune system heal
+      the heart?" is a scientific claim in her name, not mine.
+
+## 4. Content still missing
+
+- [ ] Google Scholar profile URL → add to the contact block in `about.qmd`
 - [ ] LinkedIn URL → same
 - [ ] Decide whether an ORCID link belongs there too
 
 Icons use Bootstrap Icons, e.g.
 `<a href="URL"><i class="bi bi-google"></i> Scholar</a>`.
 
-## 4. Stephanie's review
+## 5. Stephanie's review
 
 All prose on the site is a draft written from `Vargas_CV_July2025.pdf`, not
 her own words. Nothing should be treated as final until she has read it.
 
-- [ ] Bio on the home page
+- [ ] Bio on the About page
 - [ ] The two "Current work" paragraphs on the research page
 - [ ] Confirm the omission of the "References: Eric Olson, Michael Sieweke"
       block that was in the Google Sites draft (referee names do not belong
@@ -61,7 +77,7 @@ her own words. Nothing should be treated as final until she has read it.
 - [ ] Confirm the 2023 Circulation Research abstract stays off the
       publication list (matches the CV)
 
-## 5. Organization
+## 6. Organization
 
 - [ ] Get Stephanie's GitHub username
 - [ ] Invite her as an Owner of the `pachalab` org (free; lets ownership

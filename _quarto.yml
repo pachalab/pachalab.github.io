@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
   post-render: bash post-render.sh
   resources:
     - .nojekyll
@@ -9,19 +11,20 @@ project:
 
 
 website:
-  title: "Stephanie Vargas Aguilar"
+  title: ""
   description: "Postdoctoral fellow, Department of Molecular Biology, UT Southwestern Medical Center — immunology and heart regeneration."
   site-url: https://www.stephanie-vargas.com
   favicon: images/favicon.png
+  search: false
   navbar:
-    background: light
-    foreground: "#1f2933"
+    background: dark
     left:
       - href: index.qmd
         text: Home
+      - href: about.qmd
+        text: About
       - href: research.qmd
         text: Research
-    right:
       - href: files/vargas-aguilar_cv.pdf
         text: CV
         target: _blank

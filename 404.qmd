@@ -1,5 +1,6 @@
 ---
 title: "Page not found"
+page-layout: full
 ---
 
 That page does not exist. Try the [home page](/) or the [research page](/research.html).
