@@ -85,5 +85,5 @@ cat docs/CNAME                                                       # www.steph
   replace the `www` CNAME with `eliascis.github.io`, add the four GitHub
   Pages A records (185.199.108–111.153) at the apex, set the custom domain
   in repo settings, enable Enforce HTTPS, then unpublish the Google Site
-  (`https://sites.google.com/d/[drive-doc-id]/edit`,
-  owner `[owner account, recorded privately]`) after a week of overlap.
+  (its editor URL and owner account are recorded in the private migration
+  notes, not here) after a week of overlap.
