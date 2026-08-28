@@ -54,8 +54,14 @@ and research prose on the site is a draft pending her sign-off.
   `citeproc` as a filter name, and `at: post-render` runs before the
   reference list exists. The substitution uses negative lookarounds so
   repeated renders stay idempotent (6 author bolds, not 12).
-- `CNAME` and `.nojekyll` live at the repo root and reach `docs/` through
-  `project.resources` in `_quarto.yml` — not through `post-render.sh`.
+- `.nojekyll` lives at the repo root and reaches `docs/` as a site resource.
+  The custom domain is held back: it lives in `_CNAME` (underscore-prefixed
+  so Quarto ignores it) and is copied to `docs/CNAME` by `post-render.sh`
+  **only** when `DEPLOY_CNAME=1`. Reason: GitHub reads `docs/CNAME` on every
+  build and sets the Pages custom domain from it; while DNS still points at
+  Google Sites that makes the `eliascis.github.io/pachalab` preview
+  301-redirect to a domain serving the old site. Resource negation
+  (`"!CNAME"`) does not work for root-level files — only for directories.
 - Icons are Bootstrap Icons (`<i class="bi bi-envelope">`), whose CSS ships
   with Quarto's Bootstrap bundle. `{{< bi … >}}` is **not** a built-in
   shortcode and renders as literal text.
@@ -81,9 +87,12 @@ cat docs/CNAME                                                       # www.steph
   As of 2026-08-27 it still points at Google Sites (`www` CNAME →
   `ghs.googlehosted.com`, no apex record) and **expires 2026-10-05** —
   confirm auto-renew.
+- Preview while DNS is unchanged: <https://eliascis.github.io/pachalab/>.
 - Cut-over (pending the domain push from Stephanie's Namecheap account):
   replace the `www` CNAME with `eliascis.github.io`, add the four GitHub
-  Pages A records (185.199.108–111.153) at the apex, set the custom domain
-  in repo settings, enable Enforce HTTPS, then unpublish the Google Site
+  Pages A records (185.199.108–111.153) at the apex, then set
+  `DEPLOY_CNAME=1` in `post-render.sh`, re-render and push so `docs/CNAME`
+  ships and GitHub picks up the custom domain; enable Enforce HTTPS once the
+  certificate is issued, then unpublish the Google Site
   (its editor URL and owner account are recorded in the private migration
   notes, not here) after a week of overlap.

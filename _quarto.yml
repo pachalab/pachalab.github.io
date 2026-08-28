@@ -3,7 +3,6 @@ project:
   output-dir: docs
   post-render: bash post-render.sh
   resources:
-    - CNAME
     - .nojekyll
     - files/
     - "!z_old/**"
