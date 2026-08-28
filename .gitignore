@@ -4,5 +4,5 @@
 .DS_Store
 **/*.quarto_ipynb
 
-# Original Google Site assets — kept on disk, never shipped or published
-/_notes/legacy/
+# Original Google Site assets and other superseded files — kept on disk, never published
+/z_old/
