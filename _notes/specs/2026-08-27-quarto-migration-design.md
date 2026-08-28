@@ -80,9 +80,12 @@ pages when there is content (YAGNI).
   - `nocite:` lists the 7 peer-reviewed keys explicitly; the abstract
     `vargasaguilar.etal2023.cr` stays in the bib but is not listed, matching
     the CV.
-  - Lua filter `_filters/bold-author.lua` bolds "Vargas Aguilar, S." in the
-    rendered reference list (CSL cannot). Guard: filter matches on surname
-    only, so both "Vargas Aguilar, S." and "Aguilar, S. V." forms are caught.
+  - Author bolding is a `perl` substitution in `post-render.sh`, not a Lua
+    filter: Quarto rejects `citeproc` as a filter name, and `at: post-render`
+    runs before citeproc emits the reference list. Verified 2026-08-27 on
+    Quarto 1.9.36 — the substitution matches both "Vargas Aguilar, S." and
+    "Aguilar, S. V.", bolds 6 occurrences, and is idempotent (negative
+    lookarounds prevent double-wrapping on re-render).
   - DOIs render as links (CSL handles this).
 
 ## Repository layout
@@ -93,11 +96,10 @@ stephanie-vargas.com/
 ├── index.qmd  research.qmd  404.qmd
 ├── stefi.bib
 ├── csl/apa-cv.csl
-├── _filters/bold-author.lua
 ├── styles.scss                # theme vars + custom rules
 ├── images/  portrait.jpg  fieldwork.jpg  favicon.png
 ├── files/   vargas-aguilar_cv.pdf
-├── post-render.sh             # writes docs/CNAME, docs/.nojekyll
+├── post-render.sh             # CNAME, .nojekyll, author bolding
 ├── docs/                      # RENDER OUTPUT — never hand-edit
 ├── _notes/specs/              # this file; ignored by Quarto (leading _)
 ├── .gitignore  CLAUDE.md  README.md
@@ -170,9 +172,9 @@ the qmd. If the CSL is missing, Quarto silently falls back to Chicago
 1. `quarto render` exits 0.
 2. `docs/index.html`, `docs/research.html`, `docs/404.html`, `docs/CNAME`
    (content `www.stephanie-vargas.com`), `docs/.nojekyll` exist.
-3. `grep -c 'doi.org' docs/research.html` = 7; first DOI in the file is
-   `10.1038/s44161-024-00447-7` (2024 entry first ⇒ CSL sort is in effect);
-   `grep -c '<strong>Vargas Aguilar' docs/research.html` ≥ 5.
+3. `grep -c 'class="csl-entry"' docs/research.html` = 7 (the 2023 abstract is
+   excluded); the first `doi.org` occurrence is `10.1038/s44161-024-00447-7`
+   (2024 entry first ⇒ CSL sort is in effect); `grep -o '<strong>' ` count = 6.
 4. `docs/files/vargas-aguilar_cv.pdf` present; PDF link on the page is
    relative and resolves.
 5. `quarto preview` visual check at desktop and 390 px width.
