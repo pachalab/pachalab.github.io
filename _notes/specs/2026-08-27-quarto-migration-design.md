@@ -150,7 +150,7 @@ domain push; each record change is confirmed with him first):
 
 Leave any Google-Sites verification TXT records; they are harmless.
 
-Cut-over order: (1) repo live at `eliascis.github.io/stephanie-vargas.com`
+Cut-over order: (1) repo live at `elias-cisneros.com/pachalab`
 and checked; (2) DNS switched; (3) verify `https://www.stephanie-vargas.com`
 and `https://stephanie-vargas.com` both serve the new site; (4) leave the
 Google Site published for 7 days as fallback, then unpublish.

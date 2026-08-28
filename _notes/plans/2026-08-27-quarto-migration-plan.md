@@ -431,7 +431,7 @@ gh api -X POST repos/eliascis/stephanie-vargas.com/pages \
 - [ ] **Step 4: Verify the site builds on the github.io address**
 
 ```bash
-curl -sI https://eliascis.github.io/stephanie-vargas.com/ | head -1   # expect 200
+curl -sI https://elias-cisneros.com/pachalab/ | head -1   # expect 200
 ```
 
 Do NOT set the custom domain yet — that belongs with the DNS cut-over, which is out of scope here.
