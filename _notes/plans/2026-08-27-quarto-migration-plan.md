@@ -411,7 +411,7 @@ git commit -m "Add 404 page and repository documentation"
 - [ ] **Step 1: Create the repository** — ask Elías to confirm before creating, since this is outward-facing.
 
 ```bash
-gh repo create eliascis/stephanie-vargas.com --public \
+gh repo create pachalab/pachalab.github.io --public \
   --description "Website of Stephanie Vargas Aguilar" --source=. --remote=origin
 ```
 
@@ -424,14 +424,14 @@ git push -u origin master
 - [ ] **Step 3: Enable Pages from `master` /docs**
 
 ```bash
-gh api -X POST repos/eliascis/stephanie-vargas.com/pages \
+gh api -X POST repos/pachalab/pachalab.github.io/pages \
   -f 'source[branch]=master' -f 'source[path]=/docs'
 ```
 
 - [ ] **Step 4: Verify the site builds on the github.io address**
 
 ```bash
-curl -sI https://elias-cisneros.com/pachalab/ | head -1   # expect 200
+curl -sI https://pachalab.github.io/ | head -1   # expect 200
 ```
 
 Do NOT set the custom domain yet — that belongs with the DNS cut-over, which is out of scope here.

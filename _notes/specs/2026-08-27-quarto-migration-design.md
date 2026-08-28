@@ -32,7 +32,7 @@ Pages, maintained by Elías, deployed with the same manual `quarto render` →
 | Decision | Choice |
 |---|---|
 | Engine | Quarto website, rendered locally, served from `docs/` on `master` |
-| Repo | `eliascis/stephanie-vargas.com`, public (Pages on private repos needs GitHub Pro) |
+| Repo | `pachalab/pachalab.github.io`, public (Pages on private repos needs GitHub Pro). Owned by the `pachalab` organization, mirroring `prise-lab`, so ownership can pass to Stephanie without touching Elías's account. |
 | Domain | `www.stephanie-vargas.com` canonical; apex A-records redirect to www |
 | Maintainer | Elías; Stephanie sends content |
 | Look | Standalone identity, not PRISE-branded |

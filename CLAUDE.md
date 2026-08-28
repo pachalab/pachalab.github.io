@@ -59,7 +59,7 @@ and research prose on the site is a draft pending her sign-off.
   so Quarto ignores it) and is copied to `docs/CNAME` by `post-render.sh`
   **only** when `DEPLOY_CNAME=1`. Reason: GitHub reads `docs/CNAME` on every
   build and sets the Pages custom domain from it; while DNS still points at
-  Google Sites that makes the elias-cisneros.com/pachalab preview
+  Google Sites that makes the pachalab.github.io preview
   301-redirect to a domain serving the old site. Resource negation
   (`"!CNAME"`) does not work for root-level files — only for directories.
 - Icons are Bootstrap Icons (`<i class="bi bi-envelope">`), whose CSS ships
@@ -82,15 +82,15 @@ cat docs/CNAME                                                       # www.steph
 
 ## Hosting and DNS
 
-- Repo: `eliascis/stephanie-vargas.com`; GitHub Pages from `master` `/docs`.
+- Repo: `pachalab/pachalab.github.io` (org-owned site repo, like `prise-lab`);
+  GitHub Pages from `master` `/docs`. Preview: <https://pachalab.github.io/>.
 - Domain `stephanie-vargas.com` is registered at **Namecheap** (BasicDNS).
   As of 2026-08-27 it still points at Google Sites (`www` CNAME →
   `ghs.googlehosted.com`, no apex record) and **expires 2026-10-05** —
   confirm auto-renew.
-- Preview while DNS is unchanged: <https://elias-cisneros.com/pachalab/> (project pages serve from the user
-  site's custom domain, not from `eliascis.github.io`).
+- Preview while DNS is unchanged: <https://pachalab.github.io/>.
 - Cut-over (pending the domain push from Stephanie's Namecheap account):
-  replace the `www` CNAME with `eliascis.github.io`, add the four GitHub
+  replace the `www` CNAME with `pachalab.github.io`, add the four GitHub
   Pages A records (185.199.108–111.153) at the apex, then set
   `DEPLOY_CNAME=1` in `post-render.sh`, re-render and push so `docs/CNAME`
   ships and GitHub picks up the custom domain; enable Enforce HTTPS once the
