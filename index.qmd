@@ -7,7 +7,7 @@ pagetitle: "Stephanie Vargas Aguilar"
 ![](images/portrait.jpg){.profile-photo fig-alt="Stephanie Vargas Aguilar"}
 
 ::: {.profile-text}
-# Stephanie Vargas Aguilar {.name-heading}
+<div class="name-heading" role="heading" aria-level="1">Stephanie Vargas Aguilar</div>
 
 ::: {.affiliation}
 Postdoctoral fellow · Department of Molecular Biology · UT Southwestern Medical Center

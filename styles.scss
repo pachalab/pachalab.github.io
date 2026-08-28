@@ -1,3 +1,73 @@
 /*-- scss:defaults --*/
-$primary: #2b7a9e;
-$body-color: #1f2933;
+$primary:      #2b7a9e;
+$body-color:   #1f2933;
+$link-color:   #2b7a9e;
+$navbar-bg:    #ffffff;
+
+$headings-font-family:   Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+/*-- scss:rules --*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+.name-heading {
+  color: $primary;
+  font-family: $headings-font-family;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+  margin: 0 0 0.35rem 0;
+}
+
+.affiliation {
+  color: #5a6672;
+  font-size: 1.02rem;
+  margin-bottom: 1.4rem;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.profile-photo {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.profile-text p { line-height: 1.65; }
+
+.contact-row {
+  margin-top: 1.75rem;
+}
+
+.contact-row p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 0;
+}
+
+.contact-row a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact-row a:hover { text-decoration: underline; }
+
+.csl-entry {
+  margin-bottom: 1.1rem;
+  padding-left: 1.4rem;
+  text-indent: -1.4rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 700px) {
+  .profile-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .profile-photo { max-width: 220px; }
+}
