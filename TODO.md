@@ -52,8 +52,9 @@ scientific image.
 - [ ] Drop it in as `images/hero.jpg` and swap the placeholder in
       `styles.scss` (`.hero { background: ... }`) — a one-line change; the
       commented-out `background-image` line is already there.
-- [ ] Confirm the hero question with her: "How does the immune system heal
-      the heart?" is a scientific claim in her name, not mine.
+- [x] Hero question confirmed by Elías (2026-08-28): "How does the immune
+      system heal the heart?" Still worth Stephanie's eye when she reviews
+      the prose, since it appears under her name.
 
 ## 4. Content still missing
 
