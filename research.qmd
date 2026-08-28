@@ -1,0 +1,28 @@
+---
+title: "Research"
+bibliography: stefi.bib
+csl: csl/apa-cv.csl
+nocite: |
+  @vargasaguilar.etal2024.ncr, @gainullina.etal2023.cr, @subramanian.etal2022.ni,
+  @aguilar.etal2020.ni, @imperatore.etal2017.tej, @matcovitchnatan.etal2016.s,
+  @dennemaerker.etal2010.bc
+---
+
+## Current work
+
+**Immune control of heart regeneration.** Newborn mammalian hearts can regenerate
+after injury; adult hearts cannot. My work shows that the PD-1/PD-L1 checkpoint
+pathway maintains the immunosuppressive environment this regenerative window
+depends on, and asks how T cell populations are recruited and licensed during
+neonatal cardiac injury.
+
+**Self-renewal and ageing of tissue-resident macrophages.** During my PhD I
+characterised a short isoform of Piwil2 required for the self-renewal of murine
+macrophages, and contributed to work on how alveolar macrophages retain their
+epigenetic identity through long-term expansion and how microglia mature in the
+developing brain.
+
+## Publications
+
+::: {#refs}
+:::
