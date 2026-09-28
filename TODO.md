@@ -64,15 +64,17 @@ scientific image.
 - [ ] LinkedIn URL → same
 - [ ] Decide whether an ORCID link belongs there too
 - [ ] When the new *Cell Reports* article is published, replace its in-press
-      citation with the final year, DOI, volume and article number in `stefi.bib`
+      status with the final DOI, volume and article number in `stefi.bib`, and
+      confirm whether 2026 remains the publication year
 
 Icons use Bootstrap Icons, e.g.
 `<a href="URL"><i class="bi bi-google"></i> Scholar</a>`.
 
 ## 5. Stephanie's review
 
-All prose on the site is a draft written from `Vargas_CV_July2025.pdf`, not
-her own words. Nothing should be treated as final until she has read it.
+All prose on the site was drafted from `Vargas_CV_July2025.pdf` and checked
+against `Vargas_CV_2026.pdf`; it is not her own words. Nothing should be
+treated as final until she has read it.
 
 - [ ] Bio on the About page
 - [ ] The two "Current work" paragraphs on the research page

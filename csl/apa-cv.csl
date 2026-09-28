@@ -1341,7 +1341,7 @@
   </macro>
   <!-- 4.1. Serial sources (APA 9.25-27) -->
   <macro name="source-serial">
-    <group delimiter=". ">
+    <group delimiter=" ">
       <group delimiter=", ">
         <group delimiter=", " font-style="italic">
           <text text-case="title" variable="container-title"/>
@@ -1367,8 +1367,8 @@
       <choose>
         <if match="any" variable="collection-title issue number page supplement-number volume"/>
         <else-if variable="issued status">
-          <!-- Print the status variable rather than use generic CSL terms (`in press`, etc.) -->
-          <text text-case="capitalize-first" variable="status"/>
+          <!-- With a stated year, keep an in-press status after the journal. -->
+          <text prefix="(" suffix=")" variable="status"/>
         </else-if>
       </choose>
     </group>
