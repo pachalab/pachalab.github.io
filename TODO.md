@@ -3,11 +3,13 @@
 Open items after the Google Sites → Quarto migration (2026-08-27).
 Live preview: <https://pachalab.github.io/>
 
-## 1. Domain renewal — deadline 2026-10-05
+## 1. Domain ownership and renewal — expiry 2027-10-05
 
-`stephanie-vargas.com` expires **2026-10-05**. It is registered at Namecheap
-(BasicDNS) on Stephanie's account. If it lapses, the current Google Site goes
-dark too, so this is independent of the migration.
+The [registry](https://rdap.verisign.com/com/v1/domain/stephanie-vargas.com)
+reports that `stephanie-vargas.com` expires **2027-10-05** (checked
+2026-09-28). It is registered at Namecheap (BasicDNS) on Stephanie's account.
+If it lapses, the current Google Site goes dark too, so this is independent
+of the migration.
 
 - [ ] Confirm auto-renew is on
 - [ ] Stephanie pushes the domain to Elías's Namecheap account

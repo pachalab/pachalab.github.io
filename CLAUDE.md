@@ -88,10 +88,9 @@ and research prose on the site is a draft pending her sign-off.
   referenced only from raw header HTML, which Quarto does not scan.
 - `project.render` is limited to `"*.qmd"`. Without it Quarto renders
   `TODO.md` into a public `docs/TODO.html`.
-- `_notes/` holds the design spec, the implementation plan, and
-  `_notes/legacy/pachalab/` — the original Google Site assets and the
-  `.gsite` Drive pointer. Quarto ignores `_`-prefixed directories. Nothing
-  in there is used by the build; keep it until Elías says it can go.
+- `_notes/` holds the design spec and implementation plan. `z_old/pachalab/`
+  holds the original Google Site assets and `.gsite` Drive pointer; it is
+  excluded from the build. Keep it until Elías says it can go.
 
 ## Verification before claiming a change works
 
@@ -100,17 +99,18 @@ quarto render
 grep -c 'class="csl-entry"' docs/research.html                       # 7
 grep -o 'doi.org/[^"<]*' docs/research.html | head -1                # …s44161-024-00447-7
 grep -o '<strong>\(Vargas \)\?Aguilar, S[^<]*</strong>' docs/research.html | wc -l   # 6
-cat docs/CNAME                                                       # www.stephanie-vargas.com
+test ! -e docs/CNAME                                                 # until the custom-domain cut-over
 ```
 
 ## Hosting and DNS
 
 - Repo: `pachalab/pachalab.github.io` (org-owned site repo, like `prise-lab`);
   GitHub Pages from `master` `/docs`. Preview: <https://pachalab.github.io/>.
+- Local checkout: `/Users/eliascis/Dropbox/omagua/web/pachalab`.
 - Domain `stephanie-vargas.com` is registered at **Namecheap** (BasicDNS).
-  As of 2026-08-27 it still points at Google Sites (`www` CNAME →
-  `ghs.googlehosted.com`, no apex record) and **expires 2026-10-05** —
-  confirm auto-renew.
+  As of 2026-09-28 it still points at Google Sites (`www` CNAME →
+  `ghs.googlehosted.com`, no apex record). The registry reports expiry on
+  **2027-10-05**; confirm auto-renew in the Namecheap account.
 - Preview while DNS is unchanged: <https://pachalab.github.io/>.
 - Cut-over (pending the domain push from Stephanie's Namecheap account):
   replace the `www` CNAME with `pachalab.github.io`, add the four GitHub
