@@ -40,8 +40,9 @@ and research prose on the site is a draft pending her sign-off.
 - `index.qmd` — a full-viewport hero: name, role, research question, a link
   to Research, and Stephanie's heart microscopy image on black. Desktop
   places the text and complete section side by side; at 800px and below,
-  the image moves above the text. This treatment is a local design draft
-  for review (2026-09-28; see `TODO.md` item 3).
+  the image moves above the text. Elías approved this treatment and the
+  enlarged name/affiliation for publication on 2026-09-28 (see `TODO.md`
+  item 3).
   It must not contain a markdown heading: Quarto's section wrapper absorbs
   the enclosing div's classes and the heading colour then leaks onto every
   paragraph inside, and a leading `h1` is hoisted into Quarto's title-block

@@ -41,7 +41,7 @@ Leave any Google-Sites verification TXT records; they are harmless.
 - [ ] Verify `https://www.stephanie-vargas.com` and the bare apex both serve
 - [ ] After ~7 days of overlap, unpublish the Google Site
 
-## 3. Hero image — local design ready for review
+## 3. Hero image — approved for publication
 
 The home page is a full-viewport hero. The original teal gradient and heart
 outline were placeholders; the design was modelled on
@@ -52,7 +52,8 @@ image. On 2026-09-28 Elías supplied `images/Heart.jpg` (1884 × 1516).
 - [x] Build a local preview: black background, question left, full heart
       section right; stack image above text on phones. Add a Research link.
       Responsive WebP derivatives retain the original JPEG as fallback.
-- [ ] Review the visual direction with Elías before publishing.
+- [x] Elías approved the visual direction and enlarged name/affiliation
+      for publication (2026-09-28).
 - [ ] Add an image credit or scientific caption if supplied by Stephanie;
       species and stain identities are currently unspecified.
 - [x] Hero question confirmed by Elías (2026-08-28): "How does the immune
