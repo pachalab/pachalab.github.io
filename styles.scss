@@ -48,76 +48,158 @@ body:has(.hero) footer.footer {
   display: none;
 }
 
-body:has(.hero) { overflow-x: hidden; }
+body:has(.hero) {
+  overflow-x: hidden;
+  background: #000;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+body:has(.hero) .navbar {
+  background: #000;
+  padding-left: max(0px, calc(6vw - 30px));
+  padding-right: max(0px, calc(6vw - 30px));
+}
+
+body:has(.hero) .navbar .nav-link { color: #b4b4bf; }
+body:has(.hero) .navbar .nav-link:hover,
+body:has(.hero) .navbar .nav-link.active { color: #fff; }
+
+/* Replace Quarto's article grid (including its 60px bottom row) only on
+   the home page. The body padding still follows the actual navbar height. */
+body:has(.hero) #quarto-content {
+  display: flex;
+  flex: 1;
+  min-height: 0 !important;
+}
+
+body:has(.hero) main#quarto-document-content {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  margin-bottom: 0;
+}
 
 .hero {
   position: relative;
-  min-height: calc(100vh - 58px);
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  width: 100vw;
-  display: flex;
+  flex: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.15fr);
+  gap: 2vw;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 3rem 1.5rem;
+  text-align: left;
+  padding: 3rem 6vw 5rem;
   overflow: hidden;
-  /* Placeholder background. Replace with Stephanie's microscopy image:
+  /* Original placeholder note, retained for design history:
+     Placeholder background. Replace with Stephanie's microscopy image:
      background-image: url('images/hero.jpg'); background-size: cover; */
-  background:
-    radial-gradient(ellipse at 50% 40%, rgba(43,122,158,0.55) 0%, rgba(13,27,33,0) 62%),
-    linear-gradient(160deg, #0d1b21 0%, #123241 45%, #0d1b21 100%);
+  background: #000;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: min(72vh, 70vw);
-  aspect-ratio: 1;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='0.6' d='M12 21s-7.5-4.9-9.4-9.4C1.1 8 3 4.5 6.3 4.5c2 0 3.5 1.1 4.4 2.6l1.3 2.1 1.3-2.1c.9-1.5 2.4-2.6 4.4-2.6 3.3 0 5.2 3.5 3.7 7.1C19.5 16.1 12 21 12 21z'/%3E%3C/svg%3E") center / contain no-repeat;
-  opacity: 0.10;
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 38rem;
+}
+
+.hero-visual {
+  width: calc(100% + 8vw);
+  margin-left: -3vw;
   pointer-events: none;
 }
 
-.hero-inner { position: relative; max-width: 60rem; }
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(100svh - 10rem);
+  object-fit: contain;
+}
 
 .hero-name {
   display: block;
   color: #ffffff;
   font-family: $headings-font-family;
-  font-size: clamp(1.05rem, 2.2vw, 1.6rem);
+  font-size: clamp(0.76rem, 1.05vw, 1rem);
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.34em;
-  margin-right: -0.34em;
+  letter-spacing: 0.19em;
 }
 
-.hero-role {
+.hero-role,
+.hero-affiliation {
   display: block;
-  color: rgba(255,255,255,0.62);
+  color: #a6a6ae;
   font-family: $headings-font-family;
-  font-size: clamp(0.68rem, 1.05vw, 0.82rem);
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  margin: 1.1rem 0 0 -0.2em;
-  margin-right: -0.2em;
+  font-size: 0.82rem;
+  line-height: 1.65;
+  letter-spacing: 0.025em;
 }
+
+.hero-role { margin-top: 0.9rem; }
 
 .hero-question {
   display: block;
   color: #ffffff;
   font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 300;
-  font-size: clamp(2.4rem, 6.4vw, 5.5rem);
-  line-height: 1.06;
-  margin-top: clamp(2.5rem, 7vh, 5rem);
+  font-size: clamp(3.2rem, 5.35vw, 6.2rem);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  margin-top: clamp(2rem, 5vh, 3.8rem);
   text-wrap: balance;
 }
 
 .hero p { margin: 0; }
 
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.8rem;
+  min-height: 44px;
+  margin-top: 2rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #62626c;
+  color: #e2e2e8;
+  font-family: $headings-font-family;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+.hero-link:hover { color: #fff; border-color: #fff; }
+.hero-link:focus-visible { outline: 2px solid #fff; outline-offset: 6px; }
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    align-content: center;
+    padding: 0.5rem 7vw 2.5rem;
+  }
+
+  .hero-visual {
+    grid-row: 1;
+    width: 100%;
+    max-width: 34rem;
+    margin: 0 auto;
+  }
+
+  .hero-image { max-height: 39svh; }
+  .hero-inner { max-width: 34rem; margin: 0 auto; width: 100%; }
+  .hero-name { font-size: 0.75rem; letter-spacing: 0.16em; }
+  .hero-role, .hero-affiliation { font-size: 0.75rem; }
+  .hero-role { margin-top: 0.5rem; }
+  .hero-question { font-size: clamp(2.5rem, 7.3vw, 3.6rem); margin-top: 1.3rem; }
+  .hero-link { margin-top: 1.1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-link { transition: none; }
+}
 
 
 .name-heading {

@@ -41,19 +41,20 @@ Leave any Google-Sites verification TXT records; they are harmless.
 - [ ] Verify `https://www.stephanie-vargas.com` and the bare apex both serve
 - [ ] After ~7 days of overlap, unpublish the Google Site
 
-## 3. Hero image — the design depends on it
+## 3. Hero image — local design ready for review
 
-The home page is a full-viewport hero. Its background is currently a teal
-gradient with a heart outline, which is a **placeholder**. The design is
-modelled on <https://www.alaingdlb.com/>, where the hero carries a striking
-scientific image.
+The home page is a full-viewport hero. The original teal gradient and heart
+outline were placeholders; the design was modelled on
+<https://www.alaingdlb.com/>, where the hero carries a striking scientific
+image. On 2026-09-28 Elías supplied `images/Heart.jpg` (1884 × 1516).
 
-- [ ] Ask Stephanie for a high-resolution image she is free to publish:
-      confocal / immunofluorescence / histology of heart tissue or
-      macrophages. Ideally 2400px wide or more, landscape.
-- [ ] Drop it in as `images/hero.jpg` and swap the placeholder in
-      `styles.scss` (`.hero { background: ... }`) — a one-line change; the
-      commented-out `background-image` line is already there.
+- [x] Heart microscopy image supplied for use on the homepage.
+- [x] Build a local preview: black background, question left, full heart
+      section right; stack image above text on phones. Add a Research link.
+      Responsive WebP derivatives retain the original JPEG as fallback.
+- [ ] Review the visual direction with Elías before publishing.
+- [ ] Add an image credit or scientific caption if supplied by Stephanie;
+      species and stain identities are currently unspecified.
 - [x] Hero question confirmed by Elías (2026-08-28): "How does the immune
       system heal the heart?" Still worth Stephanie's eye when she reviews
       the prose, since it appears under her name.

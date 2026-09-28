@@ -7,8 +7,21 @@ page-layout: full
 ::: {.hero-inner}
 [Stephanie Vargas Aguilar]{.hero-name}
 
-[Postdoctoral fellow · Olson Lab · UT Southwestern Medical Center]{.hero-role}
+[Postdoctoral fellow · Olson Lab]{.hero-role}
 
-[How does the immune system heal the heart?]{.hero-question}
+[UT Southwestern Medical Center]{.hero-affiliation}
+
+[How does the immune system heal the heart?]{.hero-question role="heading" aria-level="1"}
+
+[Explore the research [→]{aria-hidden="true"}](research.qmd){.hero-link .no-external}
+:::
+
+::: {.hero-visual}
+```{=html}
+<picture>
+  <source type="image/webp" srcset="images/heart-960.webp 960w, images/heart.webp 1884w" sizes="(max-width: 800px) 90vw, 62vw">
+  <img class="hero-image" src="images/Heart.jpg" width="1884" height="1516" alt="Microscopy image of a heart tissue section, with intricate red fibers and blue puncta against a black background." fetchpriority="high" decoding="async">
+</picture>
+```
 :::
 :::

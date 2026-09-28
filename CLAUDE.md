@@ -37,17 +37,30 @@ and research prose on the site is a draft pending her sign-off.
 
 ## How the pieces fit
 
-- `index.qmd` — a full-viewport hero and nothing else: name, role, and the
-  research question, over a placeholder gradient (see `TODO.md` item 3).
+- `index.qmd` — a full-viewport hero: name, role, research question, a link
+  to Research, and Stephanie's heart microscopy image on black. Desktop
+  places the text and complete section side by side; at 800px and below,
+  the image moves above the text. This treatment is a local design draft
+  for review (2026-09-28; see `TODO.md` item 3).
   It must not contain a markdown heading: Quarto's section wrapper absorbs
   the enclosing div's classes and the heading colour then leaks onto every
   paragraph inside, and a leading `h1` is hoisted into Quarto's title-block
   header, out of the layout. Use spans with classes, as it does now.
 - `about.qmd` — bio, portrait, and contact details. There is no separate
   contact page by design.
-- Hero mechanics live in `styles.scss` under `body:has(.hero)`: Quarto's
-  `<main>` margin, the empty title block, and the footer are all suppressed
-  so the home page is exactly one screen with no scrollbar.
+- Hero mechanics live in `styles.scss` under `body:has(.hero)`: a flex
+  layout replaces Quarto's article grid and its empty 60px bottom row;
+  the empty title block and footer are suppressed. The home page fills
+  one screen when the content fits, and scrolls naturally on short screens
+  or with enlarged text.
+- `images/Heart.jpg` is the supplied 1884 × 1516 original. The hero uses
+  responsive WebP derivatives, with the JPEG as fallback. Regenerate with:
+  `cwebp -q 90 -sharp_yuv -m 6 images/Heart.jpg -o images/heart.webp` and
+  `cwebp -q 90 -sharp_yuv -m 6 -resize 960 0 images/Heart.jpg -o images/heart-960.webp`.
+  The image is displayed intact, with no tint, overlay, or animation.
+  Species, stains, and a scientific caption have not been supplied.
+  The Research call to action uses `.no-external` so it remains in the
+  same tab on both the preview domain and the eventual custom domain.
 - Layout uses two custom properties: `--measure` (940px) is the alignment
   grid that the title, headings and photo column share; `--text-measure`
   (720px) is the reading width. Prose gets `padding-right` rather than a
