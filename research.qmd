@@ -4,7 +4,8 @@ bibliography: stefi.bib
 csl: csl/apa-cv.csl
 page-layout: full
 nocite: |
-  @vargasaguilar.etal2024.ncr, @gainullina.etal2023.cr, @subramanian.etal2022.ni,
+  @vargasaguilar.etal.inpress.cr, @vargasaguilar.etal2024.ncr,
+  @gainullina.etal2023.cr, @subramanian.etal2022.ni,
   @aguilar.etal2020.ni, @imperatore.etal2017.tej, @matcovitchnatan.etal2016.s,
   @dennemaerker.etal2010.bc
 ---
@@ -27,3 +28,6 @@ developing brain.
 
 ::: {#refs}
 :::
+
+For the in-press *Cell Reports* article, Stephanie Vargas Aguilar and Eric N.
+Olson are co-corresponding authors.

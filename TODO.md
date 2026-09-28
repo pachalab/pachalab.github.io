@@ -3,7 +3,7 @@
 Open items after the Google Sites → Quarto migration (2026-08-27).
 Live preview: <https://pachalab.github.io/>
 
-## 1. Domain ownership and renewal — expiry 2027-10-05
+## 1. Domain account access and renewal — expiry 2027-10-05
 
 The [registry](https://rdap.verisign.com/com/v1/domain/stephanie-vargas.com)
 reports that `stephanie-vargas.com` expires **2027-10-05** (checked
@@ -11,15 +11,15 @@ reports that `stephanie-vargas.com` expires **2027-10-05** (checked
 If it lapses, the current Google Site goes dark too, so this is independent
 of the migration.
 
-- [ ] Confirm auto-renew is on
-- [ ] Stephanie pushes the domain to Elías's Namecheap account
+- [ ] Confirm access to Stephanie's Namecheap account and that auto-renew is on
+- [ ] Optional: Stephanie pushes the domain to Elías's Namecheap account
       (Domain List → Manage → Sharing & Transfer → Change Ownership).
       Free, immediate, keeps the expiry date; no auth code, no 60-day wait
       because the domain stays inside Namecheap. Changing the registrant can
       set a 60-day *outbound* transfer lock — irrelevant unless moving
       registrars soon.
 
-## 2. DNS cut-over (blocked on item 1)
+## 2. DNS cut-over (blocked on account access and Stephanie's content review)
 
 Namecheap → `stephanie-vargas.com` → Advanced DNS:
 
@@ -63,6 +63,8 @@ scientific image.
 - [ ] Google Scholar profile URL → add to the contact block in `about.qmd`
 - [ ] LinkedIn URL → same
 - [ ] Decide whether an ORCID link belongs there too
+- [ ] When the new *Cell Reports* article is published, replace its in-press
+      citation with the final year, DOI, volume and article number in `stefi.bib`
 
 Icons use Bootstrap Icons, e.g.
 `<a href="URL"><i class="bi bi-google"></i> Scholar</a>`.
@@ -85,6 +87,13 @@ her own words. Nothing should be treated as final until she has read it.
 - [ ] Get Stephanie's GitHub username
 - [ ] Invite her as an Owner of the `pachalab` org (free; lets ownership
       pass to her later without touching Elías's account)
+
+## 7. Preview-site metadata
+
+- [ ] While `pachalab.github.io` is the public site, set Quarto's `site-url`
+      to `https://pachalab.github.io` and re-render so `docs/sitemap.xml`
+      and `docs/robots.txt` point to the live preview. Switch it to the
+      custom domain when the DNS cut-over is ready.
 
 ## Not planned
 
