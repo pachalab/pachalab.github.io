@@ -39,7 +39,10 @@ Leave any Google-Sites verification TXT records; they are harmless.
 - [x] Enable "Enforce HTTPS" in repo settings after certificate approval
 - [x] Verify `https://www.stephanie-vargas.com` serves the site and the bare
       apex redirects to it
-- [ ] After ~7 days of overlap, unpublish the Google Site
+- [x] Unpublish the Google Site (2026-09-29); the direct URL now requires
+      sign-in for unauthenticated visitors.
+- [ ] Confirm removal of the owner-owned `PachaLab` Google Sites file; it still
+      opens in Elías's editor account after unpublishing.
 
 ## 3. Hero image — approved for publication
 
