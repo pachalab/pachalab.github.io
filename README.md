@@ -10,6 +10,8 @@ quarto render      # rebuild docs/
 git add -A && git commit -m "..." && git push   # deploy
 ```
 
-Publications are generated from `stefi.bib`; do not hand-edit the list.
+Publications are generated from `stefi.bib` by
+`scripts/build_publications.py` during `quarto render`; do not hand-edit the
+list or the rendered `docs/publications.html`.
 See `CLAUDE.md` for the deploy guardrails and the non-obvious details of
 the build.

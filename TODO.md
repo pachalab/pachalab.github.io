@@ -69,7 +69,7 @@ image. On 2026-09-28 Elías supplied `images/Heart.jpg` (1884 × 1516).
 
 ## 4. Content still missing
 
-- [ ] Google Scholar profile URL → add to the contact block in `about.qmd`
+- [ ] Google Scholar profile URL → add to `contact.qmd`
 - [ ] LinkedIn URL → same
 - [ ] Decide whether an ORCID link belongs there too
 - [ ] When the new *Cell Reports* article is published, replace its in-press

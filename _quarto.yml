@@ -25,6 +25,10 @@ website:
         text: About
       - href: research.qmd
         text: Research
+      - href: publications.qmd
+        text: Publications
+      - href: contact.qmd
+        text: Contact
       - href: files/vargas-aguilar_cv.pdf
         text: CV
         target: _blank

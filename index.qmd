@@ -13,7 +13,7 @@ page-layout: full
 
 [How does the immune system heal the heart?]{.hero-question role="heading" aria-level="1"}
 
-[Explore the research [→]{aria-hidden="true"}](research.qmd){.hero-link .no-external}
+[Lessons from Newborns.]{.hero-subtitle}
 :::
 
 ::: {.hero-visual}

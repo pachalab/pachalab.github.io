@@ -20,12 +20,6 @@ themselves, and a Diploma in Molecular Medicine at the University of Freiburg.
 Alongside research I chair the webinar committee of the International Society
 for Regenerative Biology for the Americas, and I speak about the path of a
 Latin American scientist in STEM.
-
-::: {.about-contact}
-<i class="bi bi-envelope"></i> [stephanie.vargasaguilar@utsouthwestern.edu](mailto:stephanie.vargasaguilar@utsouthwestern.edu)
-
-<i class="bi bi-file-earmark-person"></i> [Curriculum vitae](files/vargas-aguilar_cv.pdf)
-:::
 :::
 
 ![](images/portrait.jpg){.about-photo fig-alt="Stephanie Vargas Aguilar"}

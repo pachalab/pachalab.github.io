@@ -1,0 +1,6 @@
+---
+title: "Publications"
+page-layout: full
+---
+
+<div id="publication-list-placeholder"></div>

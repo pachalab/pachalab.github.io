@@ -1,0 +1,10 @@
+---
+title: "Contact"
+page-layout: full
+---
+
+Stephanie Vargas Aguilar<br>
+Olson Lab, Department of Molecular Biology<br>
+UT Southwestern Medical Center
+
+<i class="bi bi-envelope" aria-hidden="true"></i> [stephanie.vargasaguilar@utsouthwestern.edu](mailto:stephanie.vargasaguilar@utsouthwestern.edu)
