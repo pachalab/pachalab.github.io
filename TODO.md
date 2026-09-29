@@ -60,6 +60,13 @@ image. On 2026-09-28 Elías supplied `images/Heart.jpg` (1884 × 1516).
       system heal the heart?" Still worth Stephanie's eye when she reviews
       the prose, since it appears under her name.
 
+### Centered background experiment (2026-09-28)
+
+- [x] Preserve the published design on `master` at `8564a22` before editing.
+- [x] Build a local alternative on `experiment/centered-heart-hero`:
+      centered text over an enlarged heart image, with shading for contrast.
+- [ ] Review this alternative with Elías; the side-by-side design remains live.
+
 ## 4. Content still missing
 
 - [ ] Google Scholar profile URL → add to the contact block in `about.qmd`

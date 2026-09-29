@@ -38,11 +38,15 @@ and research prose on the site is a draft pending her sign-off.
 ## How the pieces fit
 
 - `index.qmd` — a full-viewport hero: name, role, research question, a link
-  to Research, and Stephanie's heart microscopy image on black. Desktop
-  places the text and complete section side by side; at 800px and below,
-  the image moves above the text. Elías approved this treatment and the
-  enlarged name/affiliation for publication on 2026-09-28 (see `TODO.md`
-  item 3).
+  to Research, and Stephanie's heart microscopy image. The local branch
+  `experiment/centered-heart-hero` centers the text over the enlarged image,
+  with a dark gradient for contrast. Portrait screens crop more of the
+  image's sides. This variant is awaiting review, not published.
+  The approved, published version places the text and complete section
+  side by side, stacking on phones. It is preserved on `master` at
+  `8564a22`; switching back to that branch restores it. Elías approved
+  the original treatment and enlarged name/affiliation on 2026-09-28
+  (see `TODO.md` item 3).
   It must not contain a markdown heading: Quarto's section wrapper absorbs
   the enclosing div's classes and the heading colour then leaks onto every
   paragraph inside, and a leading `h1` is hoisted into Quarto's title-block
@@ -58,7 +62,9 @@ and research prose on the site is a draft pending her sign-off.
   responsive WebP derivatives, with the JPEG as fallback. Regenerate with:
   `cwebp -q 90 -sharp_yuv -m 6 images/Heart.jpg -o images/heart.webp` and
   `cwebp -q 90 -sharp_yuv -m 6 -resize 960 0 images/Heart.jpg -o images/heart-960.webp`.
-  The image is displayed intact, with no tint, overlay, or animation.
+  In the published version the image is displayed intact, with no tint,
+  overlay, or animation. The centered experiment uses `object-fit: cover`
+  and a CSS shading layer; the source image files remain unchanged.
   Species, stains, and a scientific caption have not been supplied.
   The Research call to action uses `.no-external` so it remains in the
   same tab on both the preview domain and the eventual custom domain.
