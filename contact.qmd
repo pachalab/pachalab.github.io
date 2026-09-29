@@ -5,7 +5,7 @@ sidebar: contact-profiles
 ---
 
 Stephanie Vargas Aguilar<br>
-[Olson Lab](https://labs.utsouthwestern.edu/olson-lab/lab-members), Department of Molecular Biology<br>
+[Olson Lab](https://labs.utsouthwestern.edu/olson-lab), Department of Molecular Biology<br>
 UT Southwestern Medical Center
 
 <i class="bi bi-envelope" aria-hidden="true"></i> [stephanie.vargasaguilar@utsouthwestern.edu](mailto:stephanie.vargasaguilar@utsouthwestern.edu)

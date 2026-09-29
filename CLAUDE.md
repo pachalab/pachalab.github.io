@@ -76,14 +76,14 @@ instructions do not apply here.
   `contact.qmd`. On small screens, Quarto exposes the links through a
   collapsible navigation bar.
   Its first, unlinked text item is Stephanie's name, followed by the Olson
-  Lab team, email, and professional profiles. Contact is omitted from the
+  Lab, email, and professional profiles. Contact is omitted from the
   top navbar; its existing page remains available directly.
 - `images/Heart.jpg` is the supplied 1884 × 1516 original. The hero uses
   responsive WebP derivatives, with the JPEG as fallback. Regenerate with:
   `cwebp -q 90 -sharp_yuv -m 6 images/Heart.jpg -o images/heart.webp` and
   `cwebp -q 90 -sharp_yuv -m 6 -resize 960 0 images/Heart.jpg -o images/heart-960.webp`.
   The previous side-by-side version displayed the image intact, with no
-  tint, overlay, or animation. The accepted centered layout scales it to 88%
+  tint, overlay, or animation. The accepted centered layout scales it to 80%
   of the hero width on wide screens, or 88% of its height on portrait
   screens, to reduce cropping. It uses a CSS shading layer; the source
   image files remain unchanged.

@@ -40,9 +40,9 @@ website:
     border: false
     contents:
       - text: Stephanie Vargas Aguilar
-      - text: Olson Lab team
+      - text: Olson Lab
         icon: people
-        href: https://labs.utsouthwestern.edu/olson-lab/lab-members
+        href: https://labs.utsouthwestern.edu/olson-lab
         target: _blank
         rel: noopener
       - text: Email
