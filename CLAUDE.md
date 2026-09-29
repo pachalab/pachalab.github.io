@@ -63,8 +63,10 @@ and research prose on the site is a draft pending her sign-off.
   `cwebp -q 90 -sharp_yuv -m 6 images/Heart.jpg -o images/heart.webp` and
   `cwebp -q 90 -sharp_yuv -m 6 -resize 960 0 images/Heart.jpg -o images/heart-960.webp`.
   In the published version the image is displayed intact, with no tint,
-  overlay, or animation. The centered experiment uses `object-fit: cover`
-  and a CSS shading layer; the source image files remain unchanged.
+  overlay, or animation. The centered experiment scales the image to 88%
+  of the hero width on wide screens, or 88% of its height on portrait
+  screens, to reduce cropping. It uses a CSS shading layer; the source
+  image files remain unchanged.
   Species, stains, and a scientific caption have not been supplied.
   The Research call to action uses `.no-external` so it remains in the
   same tab on both the preview domain and the eventual custom domain.

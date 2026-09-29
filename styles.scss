@@ -115,11 +115,20 @@ body:has(.hero) main#quarto-document-content {
 .hero-visual picture { display: block; height: 100%; }
 
 .hero-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  width: 88%;
+  height: auto;
+  max-width: none;
+  transform: translate(-50%, -50%);
+}
+
+/* Pull back the actual image, rather than shrinking a frame that still
+   crops it with object-fit: cover. Portrait screens scale by height. */
+@media (max-aspect-ratio: 1884/1516) {
+  .hero-image { width: auto; height: 88%; }
 }
 
 /* Keep the microscopy visible around the text; the strongest shading is
