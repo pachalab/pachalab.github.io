@@ -76,8 +76,11 @@ and research prose on the site is a draft pending her sign-off.
   `<section class="level2">`.
 - `research.qmd` — the two current-work descriptions, separate from the
   publication list.
-- `publications.qmd` — eight linked-title publication citations generated from
+- `publications.qmd` — eight compact publication entries generated from
   `stefi.bib` by `scripts/build_publications.py` after rendering. The
+  title is a modest linked heading, followed by an author line and a line
+  for the year, journal and publication details. These headings override
+  the global uppercase section-heading style in `styles.scss`. The
   explicit key list retains newest-first order and excludes the ninth bib
   entry, `vargasaguilar.etal2023.cr`, a conference abstract, matching the CV.
   Quarto renders a placeholder, which the post-render script replaces in

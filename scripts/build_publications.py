@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build linked publication citations from the site's BibTeX source."""
+"""Build compact publication entries from the site's BibTeX source."""
 
 import html
 import json
@@ -42,7 +42,7 @@ def author_name(author):
     return name
 
 
-def card(item):
+def publication_entry(item):
     title = html.escape(item["title"])
     doi = item.get("DOI")
     if doi:
@@ -63,11 +63,11 @@ def card(item):
     volume = html.escape(item.get("volume", ""))
     issue = html.escape(item.get("issue", ""))
     pages = html.escape(item.get("page", "")).replace("-", "–")
-    detail = f"<em>{journal}</em>"
+    detail = f'<span class="publication-year">{year}</span> · <em>{journal}</em>'
     if status:
         detail += f" ({html.escape(status)})"
     if volume:
-        detail += f", <em>{volume}</em>"
+        detail += f", {volume}"
         if issue:
             detail += f"({issue})"
     if pages:
@@ -75,7 +75,9 @@ def card(item):
 
     return (
         f'<li class="publication-entry" id="ref-{html.escape(item["id"], quote=True)}">\n'
-        f'  <p class="publication-citation">{shown} ({year}). {title}. {detail}.</p>\n'
+        f'  <h2 class="publication-title">{title}</h2>\n'
+        f'  <p class="publication-authors">{shown}</p>\n'
+        f'  <p class="publication-details">{detail}.</p>\n'
         "</li>"
     )
 
@@ -93,7 +95,7 @@ def main():
         raise ValueError(f"Publication keys missing from {BIB}: {sorted(missing)}")
 
     markup = '<ol class="publication-list">\n'
-    markup += "\n".join(card(entries[key]) for key in PUBLICATION_KEYS)
+    markup += "\n".join(publication_entry(entries[key]) for key in PUBLICATION_KEYS)
     markup += "\n</ol>\n"
     original = OUTPUT.read_text(encoding="utf-8")
     page, count = PLACEHOLDER.subn(lambda _: markup, original)
