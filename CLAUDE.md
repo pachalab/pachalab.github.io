@@ -111,6 +111,9 @@ and research prose on the site is a draft pending her sign-off.
   competing ones make the browser's choice ambiguous.
 - `images/` is listed under `project.resources` because the icon files are
   referenced only from raw header HTML, which Quarto does not scan.
+- `images/publication-review/` holds local figure candidates and source notes
+  for review. It is ignored by Git and excluded from Quarto resources; do not
+  add its contents to the site without checking figure reuse permissions.
 - `project.render` is limited to `"*.qmd"`. Without it Quarto renders
   `TODO.md` into a public `docs/TODO.html`.
 - `_notes/` holds the design spec and implementation plan. `z_old/pachalab/`

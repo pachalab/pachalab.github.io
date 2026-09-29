@@ -8,6 +8,7 @@ project:
     - .nojekyll
     - files/
     - images/
+    - "!images/publication-review/**"
     - "!z_old/**"
 
 
