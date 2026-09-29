@@ -61,9 +61,9 @@ instructions do not apply here.
   the enclosing div's classes and the heading colour then leaks onto every
   paragraph inside, and a leading `h1` is hoisted into Quarto's title-block
   header, out of the layout. Use spans with classes, as it does now.
-- `about.qmd` — currently shows only "In Progress"; the previous bio and
-  portrait layout remain in Git history pending Stephanie's review.
-  `contact.qmd` holds the email address; the CV remains available from the navbar.
+- `about.qmd` — currently shows "In Progress" beside Stephanie's portrait;
+  the previous bio remains in Git history pending her review. `contact.qmd`
+  holds the email address; the CV remains available from the navbar.
 - Hero mechanics live in `styles.scss` under `body:has(.hero)`: a flex
   layout replaces Quarto's article grid and its empty 60px bottom row;
   the empty title block and footer are suppressed. The home page fills
