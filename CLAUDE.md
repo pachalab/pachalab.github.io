@@ -9,6 +9,16 @@ pushed.
 Maintained by Elías Cisneros; Stephanie supplies content. All biographical
 and research prose on the site is a draft pending her sign-off.
 
+## Local design reference
+
+Elías's reference website, <https://elias-cisneros.com/>, has its source at
+`/Users/eliascis/Dropbox/omagua/web/eliascis.github.io`. Inspect that checkout
+directly when comparing its infrastructure or design. Its Jekyll/Minimal
+Mistakes sidebar uses `author.links` in `_config.yml` and
+`_includes/author-profile.html`. Treat it as a visual reference and adapt
+the pattern to this site's Quarto structure; its implementation and build
+instructions do not apply here.
+
 ## Deploy workflow (do not deviate)
 
 ```
@@ -58,6 +68,11 @@ and research prose on the site is a draft pending her sign-off.
   the empty title block and footer are suppressed. The home page fills
   one screen when the content fits, and scrolls naturally on short screens
   or with enlarged text.
+- The homepage contact/profile links in `index.qmd` form a narrow left
+  column on desktop and a two-column list below the hero copy at widths
+  of 1000px or less. Keep their destinations in sync with `contact.qmd`.
+  Use `<div role="complementary">` for this block: a literal `<aside>`
+  makes Quarto inject its margin-column grid into the hero.
 - `images/Heart.jpg` is the supplied 1884 × 1516 original. The hero uses
   responsive WebP derivatives, with the JPEG as fallback. Regenerate with:
   `cwebp -q 90 -sharp_yuv -m 6 images/Heart.jpg -o images/heart.webp` and
