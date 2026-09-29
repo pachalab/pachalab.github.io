@@ -372,46 +372,35 @@ main h2 {
 
 main h2:first-of-type { margin-top: 1rem; }
 
-/* ---------- Publication blurbs ---------- */
+/* ---------- Publication citations ---------- */
 .publication-list {
   list-style: none;
-  padding: 0;
-  margin-top: 0.5rem;
+  padding-left: 0;
+  padding-right: max(0px, calc(var(--measure) - var(--text-measure)));
+  margin-top: 0;
   margin-bottom: 3rem;
 }
 
-.publication-card {
-  padding: 1.45rem 0 1.55rem;
-  border-bottom: 1px solid #dfe4e8;
+.publication-entry { margin-bottom: 1.15rem; }
+
+.publication-citation {
+  margin: 0;
+  padding-left: 1.35rem;
+  text-indent: -1.35rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-.publication-card:first-child { padding-top: 0; }
-
-.publication-card .publication-title {
-  margin: 0 0 0.45rem;
-  padding: 0;
-  border: 0;
-  color: $body-color;
-  font-size: clamp(1.16rem, 2vw, 1.36rem);
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 1.3;
-  text-transform: none;
-}
-
-.publication-title a {
-  color: inherit;
+.publication-citation a {
+  color: $primary;
+  font-weight: inherit;
+  text-decoration: underline;
   text-decoration-color: #9dc1d1;
   text-underline-offset: 3px;
 }
 
-.publication-title a:hover { color: $primary; }
+.publication-citation a:hover { text-decoration-color: currentColor; }
 
-.publication-authors,
-.publication-meta {
-  margin: 0;
-  line-height: 1.55;
+@media (max-width: 1000px) {
+  .publication-list { padding-right: 0; }
 }
-
-.publication-authors { font-size: 0.94rem; }
-.publication-meta { color: #5a6672; font-size: 0.91rem; }

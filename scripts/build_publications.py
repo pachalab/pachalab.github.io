@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build compact publication entries from the site's BibTeX source."""
+"""Build linked publication citations from the site's BibTeX source."""
 
 import html
 import json
@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BIB = ROOT / "stefi.bib"
 OUTPUT = ROOT / "docs" / "publications.html"
 PLACEHOLDER = re.compile(r'<div id="publication-list-placeholder">\s*</div>')
+RENDERED_LIST = re.compile(r'<ol class="publication-list">.*?</ol>\n?', re.DOTALL)
 
 # Peer-reviewed publications in newest-first order. The 2023 Circulation
 # Research conference abstract is deliberately excluded, as on the CV.
@@ -62,19 +63,19 @@ def card(item):
     volume = html.escape(item.get("volume", ""))
     issue = html.escape(item.get("issue", ""))
     pages = html.escape(item.get("page", "")).replace("-", "–")
-    detail = f"{journal}, {html.escape(status)}" if status else journal
+    detail = f"<em>{journal}</em>"
+    if status:
+        detail += f" ({html.escape(status)})"
     if volume:
-        detail += f", {volume}"
+        detail += f", <em>{volume}</em>"
         if issue:
             detail += f"({issue})"
     if pages:
-        detail += f": {pages}"
+        detail += f", {pages}"
 
     return (
-        f'<li class="publication-card" id="ref-{html.escape(item["id"], quote=True)}">\n'
-        f'  <h2 class="publication-title">{title}</h2>\n'
-        f'  <p class="publication-authors">{shown}</p>\n'
-        f'  <p class="publication-meta">{year} <span aria-hidden="true">·</span> {detail}</p>\n'
+        f'<li class="publication-entry" id="ref-{html.escape(item["id"], quote=True)}">\n'
+        f'  <p class="publication-citation">{shown} ({year}). {title}. {detail}.</p>\n'
         "</li>"
     )
 
@@ -94,11 +95,14 @@ def main():
     markup = '<ol class="publication-list">\n'
     markup += "\n".join(card(entries[key]) for key in PUBLICATION_KEYS)
     markup += "\n</ol>\n"
-    page = OUTPUT.read_text(encoding="utf-8")
-    page, count = PLACEHOLDER.subn(lambda _: markup, page)
+    original = OUTPUT.read_text(encoding="utf-8")
+    page, count = PLACEHOLDER.subn(lambda _: markup, original)
+    if count == 0:
+        page, count = RENDERED_LIST.subn(lambda _: markup, page)
     if count != 1:
-        raise ValueError(f"Expected one publication placeholder in {OUTPUT}")
-    OUTPUT.write_text(page, encoding="utf-8")
+        raise ValueError(f"Expected one publication placeholder or list in {OUTPUT}")
+    if page != original:
+        OUTPUT.write_text(page, encoding="utf-8")
 
 
 if __name__ == "__main__":

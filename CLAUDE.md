@@ -76,7 +76,7 @@ and research prose on the site is a draft pending her sign-off.
   `<section class="level2">`.
 - `research.qmd` — the two current-work descriptions, separate from the
   publication list.
-- `publications.qmd` — eight compact publication blurbs generated from
+- `publications.qmd` — eight linked-title publication citations generated from
   `stefi.bib` by `scripts/build_publications.py` after rendering. The
   explicit key list retains newest-first order and excludes the ninth bib
   entry, `vargasaguilar.etal2023.cr`, a conference abstract, matching the CV.
@@ -121,7 +121,7 @@ and research prose on the site is a draft pending her sign-off.
 
 ```bash
 quarto render
-grep -c 'class="publication-card"' docs/publications.html           # 8
+grep -c 'class="publication-entry"' docs/publications.html          # 8
 grep -o 'doi.org/[^"<]*' docs/publications.html | head -1            # …s44161-024-00447-7
 grep -o '<strong>\(Vargas \)\?Aguilar, S[^<]*</strong>' docs/publications.html | wc -l
 test ! -e docs/CNAME                                                 # until the custom-domain cut-over
