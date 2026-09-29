@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Banner image study · Stephanie Vargas Aguilar</title>
+<style>
+:root { color-scheme:light; font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:#23343c; background:#f6f7f7; }
+* { box-sizing:border-box; }
+body { margin:0; }
+header { background:#0d1b21; color:white; padding:24px max(24px,calc((100vw - 1200px)/2)); }
+header p { margin:0; font-size:.76rem; letter-spacing:.17em; text-transform:uppercase; color:#b7c4c9; }
+header h1 { margin:6px 0 0; font-weight:400; font-size:1.8rem; }
+main { max-width:1248px; padding:24px; margin:auto; }
+.intro { margin:0 0 22px; color:#53656d; }
+.controls { display:flex; gap:18px; flex-wrap:wrap; align-items:end; margin-bottom:18px; }
+label { display:grid; gap:5px; font-size:.8rem; font-weight:600; }
+select,input[type=text] { padding:9px; border:1px solid #bbc7cc; border-radius:4px; font:inherit; color:inherit; background:white; max-width:100%; min-height:42px; }
+input[type=range] { width:145px; accent-color:#2b7a9e; min-height:28px; }
+.check { display:flex; gap:8px; align-items:center; min-height:42px; }
+.banner { position:relative; aspect-ratio:4; background:#0d1b21; overflow:hidden; }
+.banner img { width:100%;height:100%;display:block;object-fit:cover; }
+.shade { position:absolute; inset:0; background:linear-gradient(90deg,rgba(0,0,0,.52),rgba(0,0,0,.06) 80%); }
+.banner-copy { position:absolute; inset:0; padding:5%; display:flex; flex-direction:column; justify-content:center; color:white; text-shadow:0 2px 10px #0009; }
+.banner-copy span { font-size:clamp(.6rem,1.2vw,.85rem); letter-spacing:.16em; text-transform:uppercase; }
+.banner-copy strong { font:400 clamp(1.7rem,5vw,4.5rem)/1.1 Georgia,serif; margin-top:12px; }
+.credit { font-size:.82rem; color:#53656d; margin:12px 0 7px; }
+a { color:#216c8d; text-underline-offset:3px; }
+.note { margin:0 0 28px; font-size:.9rem; color:#53656d; }
+h2 { font-size:1.1rem; font-weight:500; letter-spacing:.05em; margin-top:30px; }
+.grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+article { background:white; border:1px solid #dde3e5; }
+article button { width:100%; display:block; padding:0; border:0; background:#0d1b21; cursor:pointer; }
+article img { display:block; width:100%; aspect-ratio:4; object-fit:cover; }
+article .details { padding:14px 18px 16px; }
+article h3 { font-size:1rem; font-weight:600; margin:0 0 7px; }
+article p { font-size:.84rem; margin:5px 0; color:#53656d; }
+:focus-visible { outline:3px solid #2b7a9e; outline-offset:3px; }
+button:hover img { filter:brightness(1.07); }
+footer { margin-top:28px; font-size:.8rem; color:#53656d; }
+@media(max-width:650px) { .grid { grid-template-columns:1fr; } main { padding:18px; } .controls { gap:12px; } #image-choice { max-width:calc(100vw - 36px); } header { padding:20px 18px; } }
+</style>
+</head>
+<body>
+<header><p>Stephanie Vargas Aguilar · Design preview</p><h1>Banner image study</h1></header>
+<main>
+<p class="intro">Quito · Marseille · Freiburg · Dallas. Choose an image to compare wide and taller crops.</p>
+<div class="controls">
+  <label>Image<select id="image-choice"></select></label>
+  <label>Banner shape<select id="shape"><option value="4">Wide · 4:1</option><option value="3">Taller · 3:1</option><option value="1.777778">Landscape · 16:9</option></select></label>
+  <label>Horizontal crop<input id="crop-x" type="range" min="0" max="100" value="50"></label>
+  <label>Vertical crop<input id="crop-y" type="range" min="0" max="100" value="50"></label>
+  <label class="check"><input id="show-title" type="checkbox" checked> Preview with text</label>
+</div>
+<div class="banner" id="banner">
+  <img id="selected-image" alt="">
+  <div class="shade" id="shade"></div>
+  <div class="banner-copy" id="banner-copy"><span>Stephanie Vargas Aguilar</span><strong id="banner-title"></strong></div>
+</div>
+<p class="credit" id="selected-credit"></p>
+<p class="note" id="selected-note"></p>
+<h2>Seven shortlisted images</h2>
+<div class="grid" id="gallery"></div>
+<footer>Local design study. <a href="README.md">Selection notes and credits</a> · <a href="sources.json">Full source record</a></footer>
+</main>
+<script id="image-data" type="application/json">[{"file": "images/dallas-skyline-dusk.jpg", "label": "Dallas — skyline at dusk", "title": "File:Dallas Skyline at Dusk.jpg", "source": "https://commons.wikimedia.org/wiki/File:Dallas_Skyline_at_Dusk.jpg", "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Dallas_Skyline_at_Dusk.jpg/3840px-Dallas_Skyline_at_Dusk.jpg", "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Dallas_Skyline_at_Dusk.jpg", "original_width": 9642, "original_height": 3040, "author": "Matthew T Rader", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0", "description": "Dallas Skyline at Dusk", "shortlisted": true, "crop_x": 50, "crop_y": 55, "note": "A warm skyline silhouette at dusk. Strong contrast and room for white text.", "downloaded_width": 3840, "downloaded_height": 1211}, {"file": "images/dallas-skyline-day.jpg", "label": "Dallas — skyline from Oak Cliff", "title": "File:Downtown Dallas from Belmont Hotel in Oak Cliff, 1.jpg", "source": "https://commons.wikimedia.org/wiki/File:Downtown_Dallas_from_Belmont_Hotel_in_Oak_Cliff,_1.jpg", "download": "https://upload.wikimedia.org/wikipedia/commons/6/68/Downtown_Dallas_from_Belmont_Hotel_in_Oak_Cliff%2C_1.jpg", "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Downtown_Dallas_from_Belmont_Hotel_in_Oak_Cliff%2C_1.jpg", "original_width": 3494, "original_height": 592, "author": "Cordphaeton", "license": "CC BY-SA 3.0", "license_url": "https://creativecommons.org/licenses/by-sa/3.0", "description": "View of Downtown Dallas with the Calatrava Bridge as seen from just west of the City Center at the Belmont Hotel in Oak Cliff, 06-11-11.", "shortlisted": true, "crop_x": 50, "crop_y": 50, "note": "A very wide daylight skyline from Oak Cliff. Works best as a shallow panoramic strip.", "downloaded_width": 3494, "downloaded_height": 592}, {"file": "images/freiburg-schlossberg-panorama.jpg", "label": "Freiburg — Schlossberg panorama", "title": "File:Freiburg Panorama 1000.jpg", "source": "https://commons.wikimedia.org/wiki/File:Freiburg_Panorama_1000.jpg", "download": "https://upload.wikimedia.org/wikipedia/commons/3/36/Freiburg_Panorama_1000.jpg", "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Freiburg_Panorama_1000.jpg", "original_width": 7725, "original_height": 1000, "author": "A. Hornung", "license": "CC BY-SA 3.0", "license_url": "https://creativecommons.org/licenses/by-sa/3.0", "description": "360° panoramic view of Freiburg, Germany. Pictures taken on the Schlossberg tower and stitched using Hugin.", "shortlisted": true, "crop_x": 20, "crop_y": 50, "note": "A view from the Schlossberg tower with Freiburg below and wooded mountains to the side. The crop favors the mountain and city together.", "downloaded_width": 7725, "downloaded_height": 1000}, {"file": "images/quito-historic-center-sunset.jpg", "label": "Quito — historic center, sunset", "title": "File:Quito Panorama of the historic center at sunset from the top of Calle Caldas.jpg", "source": "https://commons.wikimedia.org/wiki/File:Quito_Panorama_of_the_historic_center_at_sunset_from_the_top_of_Calle_Caldas.jpg", "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Quito_Panorama_of_the_historic_center_at_sunset_from_the_top_of_Calle_Caldas.jpg/3840px-Quito_Panorama_of_the_historic_center_at_sunset_from_the_top_of_Calle_Caldas.jpg", "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Quito_Panorama_of_the_historic_center_at_sunset_from_the_top_of_Calle_Caldas.jpg", "original_width": 6000, "original_height": 4000, "author": "Ymblanter", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0", "description": "Panorama of the historic center at sunset from the top of Calle Caldas, Quito, Pichincha, Ecuador", "shortlisted": false, "note": "Exploratory download; not shortlisted because foreground rooftops and sky dominate the useful banner crop.", "downloaded_width": 3840, "downloaded_height": 2560}, {"file": "images/quito-historic-center-day.jpg", "label": "Quito — historic center, daylight", "title": "File:Quito Panorama of the historic center from Casa Bella Vista 02.jpg", "source": "https://commons.wikimedia.org/wiki/File:Quito_Panorama_of_the_historic_center_from_Casa_Bella_Vista_02.jpg", "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Quito_Panorama_of_the_historic_center_from_Casa_Bella_Vista_02.jpg/3840px-Quito_Panorama_of_the_historic_center_from_Casa_Bella_Vista_02.jpg", "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Quito_Panorama_of_the_historic_center_from_Casa_Bella_Vista_02.jpg", "original_width": 6000, "original_height": 4000, "author": "Ymblanter", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0", "description": "Panorama of the historic center of Quito from Casa Bella Vista, Quito, Pichincha, Ecuador", "shortlisted": false, "note": "Exploratory download; not shortlisted because foreground rooftops and sky dominate the useful banner crop.", "downloaded_width": 3840, "downloaded_height": 2560}, {"file": "images/freiburg-city-and-hills.jpg", "label": "Freiburg — city and wooded hills", "title": "File:View (Freiburg im Breisgau) jm10128.jpg", "source": "https://commons.wikimedia.org/wiki/File:View_(Freiburg_im_Breisgau)_jm10128.jpg", "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/View_%28Freiburg_im_Breisgau%29_jm10128.jpg/3840px-View_%28Freiburg_im_Breisgau%29_jm10128.jpg", "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/View_%28Freiburg_im_Breisgau%29_jm10128.jpg", "original_width": 6016, "original_height": 4000, "author": "joergens.mi", "license": "CC BY-SA 3.0", "license_url": "https://creativecommons.org/licenses/by-sa/3.0", "description": "Bilder aus Freiburg im Breisgau\nBlick über Freiburg\n\nMünster, Schloßberg und Dattler", "shortlisted": true, "crop_x": 50, "crop_y": 38, "note": "A closer view of the Münster against the wooded Schlossberg; stronger green detail, with less of the wider city.", "downloaded_width": 3840, "downloaded_height": 2553}, {"file": "images/marseille-calanques.jpg", "label": "Marseille — your Calanques panorama", "source": "https://elias-cisneros.com/research/", "local_source": "/Users/eliascis/Dropbox/omagua/web/eliascis.github.io/assets/images/IMG_20180519_162919.jpg", "author": "Existing photograph supplied through Elías’s website", "license": "User-supplied existing website asset; photographer credit to confirm", "license_url": "", "original_width": 6080, "original_height": 1671, "description": "Exact image referenced by the Research page header in the local eliascis.github.io checkout.", "shortlisted": true, "crop_x": 50, "crop_y": 50, "note": "Your existing Research-page image. Its natural 3.64:1 shape already suits a wide banner.", "downloaded_width": 6080, "downloaded_height": 1671}, {"file": "images/quito-historic-center-basilica.jpg", "label": "Quito — historic center and basilica", "title": "File:Quito as from panecillo Basilica.jpg", "source": "https://commons.wikimedia.org/wiki/File:Quito_as_from_panecillo_Basilica.jpg", "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Quito_as_from_panecillo_Basilica.jpg/3840px-Quito_as_from_panecillo_Basilica.jpg", "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Quito_as_from_panecillo_Basilica.jpg", "original_width": 4170, "original_height": 2583, "author": "Cayambe", "license": "CC BY-SA 3.0", "license_url": "https://creativecommons.org/licenses/by-sa/3.0", "description": "Quito, Ecuador: panoramic view of the historic centre of the city, as seen from El Panecillo (small piece of bread), with the basilica in the centre of the image.", "shortlisted": true, "crop_x": 50, "crop_y": 25, "note": "The clearest historic-center option: the basilica and dense colonial roofscape remain recognizable in a wide crop.", "downloaded_width": 3840, "downloaded_height": 2379}, {"file": "images/quito-historic-center-panorama.jpg", "label": "Quito — historic center and Andes panorama", "title": "File:Vista de Quito desde El Panecillo, Ecuador, 2015-07-22, DD 25-29 PAN.JPG", "source": "https://commons.wikimedia.org/wiki/File:Vista_de_Quito_desde_El_Panecillo,_Ecuador,_2015-07-22,_DD_25-29_PAN.JPG", "download": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Vista_de_Quito_desde_El_Panecillo%2C_Ecuador%2C_2015-07-22%2C_DD_25-29_PAN.JPG/3840px-Vista_de_Quito_desde_El_Panecillo%2C_Ecuador%2C_2015-07-22%2C_DD_25-29_PAN.JPG", "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Vista_de_Quito_desde_El_Panecillo%2C_Ecuador%2C_2015-07-22%2C_DD_25-29_PAN.JPG", "original_width": 20381, "original_height": 4421, "author": "Diego Delso", "license": "CC BY-SA 4.0", "license_url": "https://creativecommons.org/licenses/by-sa/4.0", "description": "View of Quito, capital of Ecuador, from El Panecillo. The city population is about 1,620,000 inhabitants and due to the orography of the region the city has a particular longish form.", "shortlisted": true, "crop_x": 20, "crop_y": 50, "note": "An expansive city-and-mountain view from El Panecillo; historic-center landmarks are smaller than in the basilica view.", "downloaded_width": 3840, "downloaded_height": 833}]</script>
+<script>
+const images=JSON.parse(document.getElementById('image-data').textContent).filter(r=>r.shortlisted);
+const order=['quito-historic-center-basilica','quito-historic-center-panorama','marseille-calanques','freiburg-schlossberg-panorama','freiburg-city-and-hills','dallas-skyline-dusk','dallas-skyline-day'];
+images.sort((a,b)=>order.findIndex(s=>a.file.includes(s))-order.findIndex(s=>b.file.includes(s)));
+const choice=document.getElementById('image-choice'), x=document.getElementById('crop-x'), y=document.getElementById('crop-y');
+const selectedImage=document.getElementById('selected-image'), credit=document.getElementById('selected-credit');
+function link(text,href) { const a=document.createElement('a'); a.textContent=text;a.href=href;a.target='_blank';a.rel='noopener';return a; }
+function creditLine(el,r) {
+  el.replaceChildren(document.createTextNode(r.author+' · '));
+  if(r.license_url) el.append(link(r.license,r.license_url),document.createTextNode(' · '));
+  el.append(link('Source',r.source),document.createTextNode(' · '),link('Open image',r.file));
+}
+function position() { selectedImage.style.objectPosition=x.value+'% '+y.value+'%'; }
+function selectImage() {
+  const r=images[Number(choice.value)];
+  selectedImage.src=r.file;selectedImage.alt=r.label;x.value=r.crop_x;y.value=r.crop_y;position();
+  document.getElementById('banner-title').textContent=r.label.split(' — ')[0];
+  document.getElementById('selected-note').textContent=r.note;
+  creditLine(credit,r);
+}
+images.forEach((r,i)=>{
+  const option=document.createElement('option');option.value=i;option.textContent=r.label;choice.append(option);
+  const article=document.createElement('article'), button=document.createElement('button'), img=document.createElement('img');
+  button.type='button';button.setAttribute('aria-label','Preview '+r.label);img.src=r.file;img.alt=r.label;img.loading='lazy';img.style.objectPosition=r.crop_x+'% '+r.crop_y+'%';button.append(img);
+  button.addEventListener('click',()=>{choice.value=i;selectImage();document.getElementById('banner').scrollIntoView({block:'center'});});
+  const details=document.createElement('div');details.className='details';const h=document.createElement('h3');h.textContent=r.label;const note=document.createElement('p');note.textContent=r.note;const credits=document.createElement('p');creditLine(credits,r);details.append(h,note,credits);article.append(button,details);document.getElementById('gallery').append(article);
+});
+choice.addEventListener('change',selectImage);x.addEventListener('input',position);y.addEventListener('input',position);
+document.getElementById('shape').addEventListener('change',e=>{document.getElementById('banner').style.aspectRatio=e.target.value;});
+document.getElementById('show-title').addEventListener('change',e=>{document.getElementById('banner-copy').hidden=!e.target.checked;document.getElementById('banner-copy').style.display=e.target.checked?'flex':'none';document.getElementById('shade').hidden=!e.target.checked;});
+choice.value=2;selectImage();
+</script>
+</body>
+</html>
