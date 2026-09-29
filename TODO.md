@@ -8,10 +8,9 @@ Live preview: <https://pachalab.github.io/>
 The [registry](https://rdap.verisign.com/com/v1/domain/stephanie-vargas.com)
 reports that `stephanie-vargas.com` expires **2027-10-05** (checked
 2026-09-28). It is registered at Namecheap (BasicDNS) on Stephanie's account.
-If it lapses, the current Google Site goes dark too, so this is independent
-of the migration.
+If it lapses, the public custom-domain site goes dark.
 
-- [ ] Confirm access to Stephanie's Namecheap account and that auto-renew is on
+- [x] Accept domain-manager access in Elías's Namecheap account; auto-renew is on
 - [ ] Optional: Stephanie pushes the domain to Elías's Namecheap account
       (Domain List → Manage → Sharing & Transfer → Change Ownership).
       Free, immediate, keeps the expiry date; no auth code, no 60-day wait
@@ -19,7 +18,7 @@ of the migration.
       set a 60-day *outbound* transfer lock — irrelevant unless moving
       registrars soon.
 
-## 2. DNS cut-over (blocked on account access and Stephanie's content review)
+## 2. DNS cut-over and HTTPS
 
 Namecheap → `stephanie-vargas.com` → Advanced DNS:
 
@@ -34,11 +33,12 @@ Namecheap → `stephanie-vargas.com` → Advanced DNS:
 
 Leave any Google-Sites verification TXT records; they are harmless.
 
-- [ ] Apply the DNS records above
-- [ ] Set `DEPLOY_CNAME=1` in `post-render.sh`, `quarto render`, commit, push
+- [x] Apply the DNS records above (2026-09-29)
+- [x] Set `DEPLOY_CNAME=1` in `post-render.sh`, `quarto render`, commit, push
       (this ships `docs/CNAME` and makes GitHub adopt the custom domain)
-- [ ] Enable "Enforce HTTPS" in repo settings once the certificate is issued
-- [ ] Verify `https://www.stephanie-vargas.com` and the bare apex both serve
+- [x] Enable "Enforce HTTPS" in repo settings after certificate approval
+- [x] Verify `https://www.stephanie-vargas.com` serves the site and the bare
+      apex redirects to it
 - [ ] After ~7 days of overlap, unpublish the Google Site
 
 ## 3. Hero image — approved for publication
@@ -100,12 +100,10 @@ treated as final until she has read it.
 - [ ] Invite her as an Owner of the `pachalab` org (free; lets ownership
       pass to her later without touching Elías's account)
 
-## 7. Preview-site metadata
+## 7. Site metadata
 
-- [ ] While `pachalab.github.io` is the public site, set Quarto's `site-url`
-      to `https://pachalab.github.io` and re-render so `docs/sitemap.xml`
-      and `docs/robots.txt` point to the live preview. Switch it to the
-      custom domain when the DNS cut-over is ready.
+- [x] Quarto's `site-url`, `docs/sitemap.xml`, and `docs/robots.txt` use
+      `https://www.stephanie-vargas.com` after the DNS cut-over.
 
 ## Not planned
 

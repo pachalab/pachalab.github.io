@@ -155,24 +155,25 @@ quarto render
 grep -c 'class="publication-entry"' docs/publications.html          # 8
 grep -o 'doi.org/[^"<]*' docs/publications.html | head -1            # …s44161-024-00447-7
 grep -o '<strong>\(Vargas \)\?Aguilar, S[^<]*</strong>' docs/publications.html | wc -l
-test ! -e docs/CNAME                                                 # until the custom-domain cut-over
+cmp _CNAME docs/CNAME                                                 # after the custom-domain cut-over
 ```
 
 ## Hosting and DNS
 
 - Repo: `pachalab/pachalab.github.io` (org-owned site repo, like `prise-lab`);
-  GitHub Pages from `master` `/docs`. Preview: <https://pachalab.github.io/>.
+  GitHub Pages from `master` `/docs`. Canonical domain:
+  <https://www.stephanie-vargas.com/>.
 - Local checkout: `/Users/eliascis/Dropbox/omagua/web/pachalab`.
 - Domain `stephanie-vargas.com` is registered at **Namecheap** (BasicDNS).
-  As of 2026-09-28 it still points at Google Sites (`www` CNAME →
-  `ghs.googlehosted.com`, no apex record). The registry reports expiry on
-  **2027-10-05**; confirm auto-renew in the Namecheap account.
-- Preview while DNS is unchanged: <https://pachalab.github.io/>.
-- Cut-over (pending the domain push from Stephanie's Namecheap account):
-  replace the `www` CNAME with `pachalab.github.io`, add the four GitHub
-  Pages A records (185.199.108–111.153) at the apex, then set
-  `DEPLOY_CNAME=1` in `post-render.sh`, re-render and push so `docs/CNAME`
-  ships and GitHub picks up the custom domain; enable Enforce HTTPS once the
-  certificate is issued, then unpublish the Google Site
-  (its editor URL and owner account are recorded in the private migration
-  notes, not here) after a week of overlap.
+  On 2026-09-29, Stephanie granted `eliascis` domain-manager access.
+  Auto-renew is on; the current registration expires **2027-10-05**.
+  `www` is a CNAME to `pachalab.github.io`, and the apex has the four GitHub
+  Pages A records (185.199.108–111.153). Keep the Google Sites verification
+  TXT record and the existing mail settings.
+- `post-render.sh` now includes `docs/CNAME` by default on each render. GitHub
+  Pages adopted `www.stephanie-vargas.com` from commit `633717e`.
+- GitHub approved a certificate for both `www` and the apex on 2026-09-29;
+  Enforce HTTPS is on. The `www` homepage serves over HTTPS, and the apex
+  redirects to it. The old Google Site remains at its Google Sites URL;
+  unpublish it after about a week of overlap (its editor URL and owner account
+  are recorded in the private migration notes, not here).
