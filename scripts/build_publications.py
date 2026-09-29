@@ -27,6 +27,10 @@ PUBLICATION_KEYS = (
     "matcovitchnatan.etal2016.s",
     "dennemaerker.etal2010.bc",
 )
+ABBREVIATED_AUTHOR_KEYS = {
+    "gainullina.etal2023.cr",
+    "aguilar.etal2020.ni",
+}
 
 
 def author_name(author):
@@ -53,8 +57,9 @@ def publication_entry(item):
         )
 
     authors = item.get("author", [])
-    shown = ", ".join(author_name(author) for author in authors[:7])
-    if len(authors) > 7:
+    abbreviated = item["id"] in ABBREVIATED_AUTHOR_KEYS and len(authors) > 7
+    shown = ", ".join(author_name(author) for author in (authors[:7] if abbreviated else authors))
+    if abbreviated:
         shown += ", et al."
 
     year = item["issued"]["date-parts"][0][0]

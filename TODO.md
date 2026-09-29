@@ -85,11 +85,12 @@ Icons use Bootstrap Icons, e.g.
 
 ## 5. Stephanie's review
 
-All prose on the site was drafted from `Vargas_CV_July2025.pdf` and checked
-against `Vargas_CV_2026.pdf`; it is not her own words. Nothing should be
-treated as final until she has read it.
+The site's draft prose was based on `Vargas_CV_July2025.pdf` and checked
+against `Vargas_CV_2026.pdf`. Elías supplied the current Research-page text on
+2026-09-29. Nothing should be treated as final until Stephanie has read it.
 
-- [ ] Bio on the About page
+- [ ] Stephanie to review or supply About-page content before replacing the
+      current "In Progress" placeholder.
 - [ ] The two "Current work" paragraphs on the research page
 - [ ] Confirm the omission of the "References: Eric Olson, Michael Sieweke"
       block that was in the Google Sites draft (referee names do not belong

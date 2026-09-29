@@ -40,14 +40,14 @@ website:
     border: false
     contents:
       - text: Stephanie Vargas Aguilar
+      - text: Email
+        icon: envelope
+        href: mailto:stephanie.vargasaguilar@utsouthwestern.edu
       - text: Olson Lab
         icon: people
         href: https://labs.utsouthwestern.edu/olson-lab
         target: _blank
         rel: noopener
-      - text: Email
-        icon: envelope
-        href: mailto:stephanie.vargasaguilar@utsouthwestern.edu
       - text: Google Scholar
         icon: mortarboard
         href: https://scholar.google.com/citations?hl=en&user=LvXfnqUAAAAJ

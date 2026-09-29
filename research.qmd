@@ -6,26 +6,36 @@ sidebar: contact-profiles
 
 ## Current work
 
-**Immune control of heart regeneration.** Newborn mammalian hearts can regenerate
-after injury; adult hearts cannot. My work shows that the PD-1/PD-L1 checkpoint
-pathway maintains the immunosuppressive environment this regenerative window
-depends on, and asks how T cell populations are recruited and licensed during
-neonatal cardiac injury.
+Why do several mammalian tissues regenerate early in life yet lose this capacity
+soon after birth? Most explanations for the closure of this regenerative window
+have focused on maturation of the injured tissue itself: changes in
+proliferative capacity, metabolism, or extracellular matrix. Yet the immune
+system is undergoing an equally dramatic transformation during this same
+period, and its contribution to regenerative decline remains underappreciated.
 
-**Self-renewal and ageing of tissue-resident macrophages.** During my PhD I
-characterised a short isoform of Piwil2 required for the self-renewal of murine
-macrophages, and contributed to work on how alveolar macrophages retain their
-epigenetic identity through long-term expansion and how microglia mature in the
-developing brain.
+The mammalian heart is among the tissues that can regenerate shortly after birth
+but lose this capacity within the first week of life. My postdoctoral work
+revealed that successful cardiac regeneration depends on active,
+developmentally restricted immune programs, rather than on the immature or
+attenuated immune state traditionally associated with the neonatal period. I
+first demonstrated that the PD-1/PD-L1 immune checkpoint pathway is highly
+active in the neonatal heart and required for regeneration after myocardial
+infarction. Disruption of this pathway altered the neonatal γδ T cell behavior,
+promoting cytotoxic and autoreactive features, excessive inflammation, and
+fibrotic repair. I subsequently identified these γδ T cells as a population of
+γδT17 cells that accumulates in the injured heart specifically during the
+regenerative window and supports regeneration through IL-17A. I further showed
+that IL-17A acts primarily on macrophages and monocytes to initiate a rapid,
+self-limited inflammatory response that supports injury resolution.
 
 ## Research funding
 
 **T cell-mediated regulation of mouse neonatal heart regeneration.** American
-Heart Association, 2025–2028 ([award 25CDA1454364](https://doi.org/10.58275/AHA.25CDA1454364.pc.gr.229577)).
+Heart Association, 2025–2028 ([Award No. 25CDA1454364](https://doi.org/10.58275/AHA.25CDA1454364.pc.gr.229577)).
 This project studies how neonatal γδ T cells and IL-17A support heart regeneration
 and whether IL-17A can improve repair after the regenerative window closes.
 
 **The role of monocyte infiltration in cardiac regeneration and repair.** American
-Heart Association, 2022–2024 ([award 916883](https://orcid.org/0000-0002-6584-0209)).
+Heart Association, 2022–2024 (Award No. 916883).
 This project examined whether sustained monocyte recruitment shifts the injured
 neonatal heart from regeneration toward fibrotic repair.

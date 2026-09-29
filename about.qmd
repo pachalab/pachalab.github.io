@@ -4,24 +4,4 @@ page-layout: full
 sidebar: contact-profiles
 ---
 
-::: {.about-grid}
-::: {.about-text}
-I am a postdoctoral fellow in the laboratory of Eric Olson at UT Southwestern
-Medical Center, where I study how the immune system shapes the regenerating
-heart. Newborn mammalian hearts can rebuild themselves after injury; adult
-hearts cannot. I work on the PD-1/PD-L1 pathway and the immunosuppressive
-environment that this regenerative window depends on — research supported
-since 2025 by an American Heart Association Career Development Award.
-
-I completed my PhD with Michael Sieweke at the Centre d'Immunologie de
-Marseille-Luminy and the Max Delbrück Center for Molecular Medicine in Berlin,
-on the molecular mechanisms that allow tissue-resident macrophages to renew
-themselves, and a Diploma in Molecular Medicine at the University of Freiburg.
-
-Alongside research I chair the webinar committee of the International Society
-for Regenerative Biology for the Americas, and I speak about the path of a
-Latin American scientist in STEM.
-:::
-
-![](images/portrait.jpg){.about-photo fig-alt="Stephanie Vargas Aguilar"}
-:::
+In Progress
