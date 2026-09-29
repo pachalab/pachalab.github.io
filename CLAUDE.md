@@ -75,6 +75,9 @@ instructions do not apply here.
   The index sets `sidebar: false`. Keep sidebar destinations in sync with
   `contact.qmd`. On small screens, Quarto exposes the links through a
   collapsible navigation bar.
+  Its first, unlinked text item is Stephanie's name, followed by the Olson
+  Lab team, email, and professional profiles. Contact is omitted from the
+  top navbar; its existing page remains available directly.
 - `images/Heart.jpg` is the supplied 1884 × 1516 original. The hero uses
   responsive WebP derivatives, with the JPEG as fallback. Regenerate with:
   `cwebp -q 90 -sharp_yuv -m 6 images/Heart.jpg -o images/heart.webp` and
@@ -139,6 +142,11 @@ instructions do not apply here.
 - `_notes/` holds the design spec and implementation plan. `z_old/pachalab/`
   holds the original Google Site assets and `.gsite` Drive pointer; it is
   excluded from the build. Keep it until Elías says it can go.
+- `_notes/banner-options/` holds downloaded banner candidates, source
+  credits, and an interactive `preview.html` gallery. Keep this design study
+  local until an image and placement are chosen. `_notes/**` is explicitly
+  excluded from `project.resources`; Quarto otherwise copies referenced
+  image assets even when the folder name starts with an underscore.
 
 ## Verification before claiming a change works
 

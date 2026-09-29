@@ -9,6 +9,7 @@ project:
     - files/
     - images/
     - "!images/publication-review/**"
+    - "!_notes/**"
     - "!z_old/**"
 
 
@@ -28,19 +29,22 @@ website:
         text: Research
       - href: publications.qmd
         text: Publications
-      - href: contact.qmd
-        text: Contact
       - href: files/vargas-aguilar_cv.pdf
         text: CV
         target: _blank
   sidebar:
     id: contact-profiles
-    title: "Contact & profiles"
-    logo-href: contact.qmd
+    title: "Stephanie Vargas Aguilar"
     style: floating
     background: white
     border: false
     contents:
+      - text: Stephanie Vargas Aguilar
+      - text: Olson Lab team
+        icon: people
+        href: https://labs.utsouthwestern.edu/olson-lab/lab-members
+        target: _blank
+        rel: noopener
       - text: Email
         icon: envelope
         href: mailto:stephanie.vargasaguilar@utsouthwestern.edu
@@ -54,9 +58,19 @@ website:
         href: https://orcid.org/0000-0002-6584-0209
         target: _blank
         rel: noopener
+      - text: ResearchGate
+        icon: journal-text
+        href: https://www.researchgate.net/profile/Stephanie-Vargas-Aguilar
+        target: _blank
+        rel: noopener
       - text: LinkedIn
         icon: linkedin
         href: https://www.linkedin.com/in/stephanievargasaguilar
+        target: _blank
+        rel: noopener
+      - text: Twitter / X
+        icon: twitter-x
+        href: https://x.com/StefiVargasA
         target: _blank
         rel: noopener
   page-footer:

@@ -14,7 +14,7 @@ sidebar: false
 
 [How does the immune system heal the heart?]{.hero-question role="heading" aria-level="1"}
 
-[Lessons from Newborns.]{.hero-subtitle}
+[Lessons from newborns]{.hero-subtitle}
 :::
 
 ::: {.hero-visual}

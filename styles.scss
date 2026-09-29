@@ -32,11 +32,21 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
 }
 
 /* ---------- Contact/profile sidebar on content pages ---------- */
+#quarto-sidebar .sidebar-item > .menu-text {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: $body-color;
+  font-family: $headings-font-family;
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
 #quarto-sidebar .sidebar-item-text {
   display: flex;
   align-items: center;
   gap: 0.65rem;
-  min-height: 44px;
+  min-height: 30px;
   color: #4c5661;
   font-size: 0.88rem;
   text-decoration: none;
