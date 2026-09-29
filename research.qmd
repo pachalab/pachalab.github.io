@@ -16,3 +16,15 @@ characterised a short isoform of Piwil2 required for the self-renewal of murine
 macrophages, and contributed to work on how alveolar macrophages retain their
 epigenetic identity through long-term expansion and how microglia mature in the
 developing brain.
+
+## Research funding
+
+**T cell-mediated regulation of mouse neonatal heart regeneration.** American
+Heart Association, 2025–2028 ([award 25CDA1454364](https://doi.org/10.58275/AHA.25CDA1454364.pc.gr.229577)).
+This project studies how neonatal γδ T cells and IL-17A support heart regeneration
+and whether IL-17A can improve repair after the regenerative window closes.
+
+**The role of monocyte infiltration in cardiac regeneration and repair.** American
+Heart Association, 2022–2024 ([award 916883](https://orcid.org/0000-0002-6584-0209)).
+This project examined whether sustained monocyte recruitment shifts the injured
+neonatal heart from regeneration toward fibrotic repair.
