@@ -105,6 +105,14 @@ treated as final until she has read it.
 - [x] Quarto's `site-url`, `docs/sitemap.xml`, and `docs/robots.txt` use
       `https://www.stephanie-vargas.com` after the DNS cut-over.
 
+## 8. Typography and search visibility
+
+- [ ] Harmonize font sizes across all pages, including headings, body text,
+      navigation, and the sidebar on desktop and mobile screens.
+- [ ] Optimize the site for Google Search: review page titles and descriptions,
+      heading structure, internal links, image alt text, canonical URLs, and
+      sitemap indexing in Google Search Console.
+
 ## Not planned
 
 News/blog page, working-papers page, analytics, comments, CI builds.
