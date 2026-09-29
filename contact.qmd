@@ -8,3 +8,9 @@ Olson Lab, Department of Molecular Biology<br>
 UT Southwestern Medical Center
 
 <i class="bi bi-envelope" aria-hidden="true"></i> [stephanie.vargasaguilar@utsouthwestern.edu](mailto:stephanie.vargasaguilar@utsouthwestern.edu)
+
+<i class="bi bi-mortarboard" aria-hidden="true"></i> [Google Scholar](https://scholar.google.com/citations?hl=en&user=LvXfnqUAAAAJ)
+
+<i class="bi bi-linkedin" aria-hidden="true"></i> [LinkedIn](https://www.linkedin.com/in/stephanievargasaguilar)
+
+<i class="bi bi-person-badge" aria-hidden="true"></i> [ORCID](https://orcid.org/0000-0002-6584-0209)
