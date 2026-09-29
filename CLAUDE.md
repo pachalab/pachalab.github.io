@@ -83,7 +83,7 @@ instructions do not apply here.
   `cwebp -q 90 -sharp_yuv -m 6 images/Heart.jpg -o images/heart.webp` and
   `cwebp -q 90 -sharp_yuv -m 6 -resize 960 0 images/Heart.jpg -o images/heart-960.webp`.
   The previous side-by-side version displayed the image intact, with no
-  tint, overlay, or animation. The accepted centered layout scales it to 80%
+  tint, overlay, or animation. The accepted centered layout scales it to 88%
   of the hero width on wide screens, or 88% of its height on portrait
   screens, to reduce cropping. It uses a CSS shading layer; the source
   image files remain unchanged.

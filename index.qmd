@@ -20,7 +20,7 @@ sidebar: false
 ::: {.hero-visual}
 ```{=html}
 <picture>
-  <source type="image/webp" srcset="images/heart-960.webp 960w, images/heart.webp 1884w" sizes="(min-aspect-ratio: 1884/1516) 80vw, 109svh">
+  <source type="image/webp" srcset="images/heart-960.webp 960w, images/heart.webp 1884w" sizes="(min-aspect-ratio: 1884/1516) 88vw, 109svh">
   <img class="hero-image" src="images/Heart.jpg" width="1884" height="1516" alt="Microscopy image of a heart tissue section, with intricate red fibers and blue puncta against a black background." fetchpriority="high" decoding="async">
 </picture>
 ```
