@@ -1,6 +1,7 @@
 ---
 title: "Research"
 page-layout: full
+sidebar: contact-profiles
 ---
 
 ## Current work

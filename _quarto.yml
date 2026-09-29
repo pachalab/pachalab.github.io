@@ -33,6 +33,32 @@ website:
       - href: files/vargas-aguilar_cv.pdf
         text: CV
         target: _blank
+  sidebar:
+    id: contact-profiles
+    title: "Contact & profiles"
+    logo-href: contact.qmd
+    style: floating
+    background: white
+    border: false
+    contents:
+      - text: Email
+        icon: envelope
+        href: mailto:stephanie.vargasaguilar@utsouthwestern.edu
+      - text: Google Scholar
+        icon: mortarboard
+        href: https://scholar.google.com/citations?hl=en&user=LvXfnqUAAAAJ
+        target: _blank
+        rel: noopener
+      - text: ORCID
+        icon: person-badge
+        href: https://orcid.org/0000-0002-6584-0209
+        target: _blank
+        rel: noopener
+      - text: LinkedIn
+        icon: linkedin
+        href: https://www.linkedin.com/in/stephanievargasaguilar
+        target: _blank
+        rel: noopener
   page-footer:
     center: "© 2026 Stephanie Vargas Aguilar · UT Southwestern Medical Center"
 

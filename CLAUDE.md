@@ -68,11 +68,13 @@ instructions do not apply here.
   the empty title block and footer are suppressed. The home page fills
   one screen when the content fits, and scrolls naturally on short screens
   or with enlarged text.
-- The homepage contact/profile links in `index.qmd` form a narrow left
-  column on desktop and a two-column list below the hero copy at widths
-  of 1000px or less. Keep their destinations in sync with `contact.qmd`.
-  Use `<div role="complementary">` for this block: a literal `<aside>`
-  makes Quarto inject its margin-column grid into the hero.
+- Keep the index homepage free of a contact/profile column; it uses the
+  centered hero layout. Elías clarified this after the sidebar preview.
+- The native Quarto sidebar `contact-profiles` is defined in `_quarto.yml`
+  and enabled explicitly in About, Research, Publications, and Contact.
+  The index sets `sidebar: false`. Keep sidebar destinations in sync with
+  `contact.qmd`. On small screens, Quarto exposes the links through a
+  collapsible navigation bar.
 - `images/Heart.jpg` is the supplied 1884 × 1516 original. The hero uses
   responsive WebP derivatives, with the JPEG as fallback. Regenerate with:
   `cwebp -q 90 -sharp_yuv -m 6 images/Heart.jpg -o images/heart.webp` and

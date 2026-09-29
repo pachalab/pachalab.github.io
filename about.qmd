@@ -1,6 +1,7 @@
 ---
 title: "About"
 page-layout: full
+sidebar: contact-profiles
 ---
 
 ::: {.about-grid}

@@ -1,6 +1,7 @@
 ---
 title: "Contact"
 page-layout: full
+sidebar: contact-profiles
 ---
 
 Stephanie Vargas Aguilar<br>
