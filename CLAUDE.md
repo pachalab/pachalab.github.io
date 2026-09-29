@@ -38,15 +38,15 @@ and research prose on the site is a draft pending her sign-off.
 ## How the pieces fit
 
 - `index.qmd` — a full-viewport hero: name, role, research question, subtitle,
-  and Stephanie's heart microscopy image. The local branch
-  `experiment/centered-heart-hero` centers the text over the enlarged image,
-  with a dark gradient for contrast. Portrait screens crop more of the
-  image's sides. This variant is awaiting review, not published.
-  The approved, published version places the text and complete section
-  side by side, stacking on phones. It is preserved on `master` at
-  `8564a22`; switching back to that branch restores it. Elías approved
-  the original treatment and enlarged name/affiliation on 2026-09-28
-  (see `TODO.md` item 3).
+  and Stephanie's heart microscopy image. The accepted version centers
+  the text over the enlarged image, with a dark gradient for contrast.
+  Portrait screens crop more of the image's sides. Elías approved this
+  version and its merge into `master` for publication on 2026-09-28.
+  It was developed on `experiment/centered-heart-hero`.
+  The previously approved version placed the text and complete section
+  side by side, stacking on phones. It remains preserved in commit
+  `8564a22`. Elías approved the original treatment and enlarged
+  name/affiliation earlier on 2026-09-28 (see `TODO.md` item 3).
   It must not contain a markdown heading: Quarto's section wrapper absorbs
   the enclosing div's classes and the heading colour then leaks onto every
   paragraph inside, and a leading `h1` is hoisted into Quarto's title-block
@@ -62,8 +62,8 @@ and research prose on the site is a draft pending her sign-off.
   responsive WebP derivatives, with the JPEG as fallback. Regenerate with:
   `cwebp -q 90 -sharp_yuv -m 6 images/Heart.jpg -o images/heart.webp` and
   `cwebp -q 90 -sharp_yuv -m 6 -resize 960 0 images/Heart.jpg -o images/heart-960.webp`.
-  In the published version the image is displayed intact, with no tint,
-  overlay, or animation. The centered experiment scales the image to 88%
+  The previous side-by-side version displayed the image intact, with no
+  tint, overlay, or animation. The accepted centered layout scales it to 88%
   of the hero width on wide screens, or 88% of its height on portrait
   screens, to reduce cropping. It uses a CSS shading layer; the source
   image files remain unchanged.
