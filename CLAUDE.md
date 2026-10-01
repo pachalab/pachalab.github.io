@@ -181,3 +181,10 @@ cmp _CNAME docs/CNAME                                                 # after th
   redirects to it. The old Google Site remains at its Google Sites URL;
   unpublish it after about a week of overlap (its editor URL and owner account
   are recorded in the private migration notes, not here).
+- Web-filter categorization: on 2026-09-30 UTSW's network blocked the site as
+  "uncategorized". Vendor databases are independent, so on 2026-10-01 Elías
+  submitted recategorization requests (Education / Reference) to FortiGuard,
+  Broadcom/Symantec, Trend Micro, BrightCloud and Cloudflare; Skyhigh already
+  carried UTSW's categories. Palo Alto (currently "Parked") and Cisco Talos
+  still need a vendor-account login. Status table and open items: `TODO.md`
+  item 9. No site-side setting affects this.

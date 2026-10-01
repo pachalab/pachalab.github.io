@@ -120,6 +120,39 @@ against `Vargas_CV_2026.pdf`. Elías supplied the current Research-page text on
       heading structure, internal links, image alt text, canonical URLs, and
       sitemap indexing in Google Search Console.
 
+## 9. Web-filter categorization (UTSW block, 2026-09-30)
+
+On 2026-09-30 UTSW's campus network blocked the site as an "uncategorized"
+website; UTSW IT suggested the categories Professional Networking and Job
+Search, and Stephanie filed a UTSW service incident. Each filter vendor keeps
+its own database, so a UTSW-local fix does not propagate; strict policies of
+this kind are typical of hospital and medical-center networks. Nothing on the
+site or GitHub side assigns a category. Requests submitted 2026-10-01 by Elías
+(contact: his UT Dallas address; requested Education or Reference/Research,
+Personal Sites as fallback). Expected turnaround one to seven days.
+
+| Vendor | Status 2026-10-01 | Action |
+|---|---|---|
+| Skyhigh/Trellix (ex-McAfee) | Job Search + Professional Networking, Minimal Risk, DB dated 2026-10-01 | None; matches UTSW IT's wording, so UTSW's own ticket applied |
+| FortiGuard | Not Rated | Submitted (Education) |
+| Broadcom/Symantec WebPulse | Not rated | Submitted (Education, Personal Sites) |
+| Trend Micro | Untested, Newly Observed Domain | Submitted (Safe, Education); needs e-mail confirmation click |
+| BrightCloud/OpenText | Entertainment and Arts (allowed, but wrong) | Submitted (Reference and Research, Educational Institutions) |
+| Cloudflare Radar/Gateway | Uncategorized | Submitted (Education, Science) |
+| Palo Alto PAN-DB | Parked (stale; strict policies block parked domains) | Open: change requests need a Palo Alto account since 2026-03-15 |
+| Cisco Talos (Umbrella, Firepower) | No category, reputation Unknown | Open: needs a Cisco account |
+| Zscaler / Check Point / Forcepoint | not checkable | Customer-only lookup / User Center login / lookup host defunct |
+
+- [ ] Click the Trend Micro confirmation link sent to Elías's UT Dallas inbox
+- [ ] Create a Palo Alto Networks account and file the PAN-DB change request
+      at <https://urlfiltering.paloaltonetworks.com/> (highest priority:
+      Palo Alto is the most common hospital firewall)
+- [ ] Optionally file the Cisco Talos content-categorization ticket
+      (<https://talosintelligence.com/reputation_center/lookup?search=stephanie-vargas.com>)
+- [ ] Re-check the vendor lookups about one week after 2026-10-01
+- [ ] Tell Stephanie that the UTSW fix does not propagate to other
+      institutions and that the remaining vendors are being handled
+
 ## Not planned
 
 News/blog page, working-papers page, analytics, comments, CI builds.
