@@ -95,6 +95,14 @@ against `Vargas_CV_2026.pdf`. Elías supplied the current Research-page text on
 - [ ] The remaining "Current work" paragraph on the research page (the
       opening paragraph moved to About on 2026-10-02; Elías plans to add
       more research text)
+- [ ] The October 2026 CV lists Stephanie as Instructor (2025–present), but
+      the site still says "Postdoctoral fellow" in the `index.qmd` hero role,
+      the `_quarto.yml` site description, and the `CLAUDE.md` header. Confirm
+      the title and update all three together.
+- [ ] Decide whether the Freire-Fierro et al. 2026 perspective in *Frontiers
+      in Research Metrics and Analytics* (PMID 42528971), listed in the CV
+      under "Other scholarly publications", belongs on the publications page
+      (`stefi.bib` + key list in `scripts/build_publications.py`).
 - [ ] Confirm the omission of the "References: Eric Olson, Michael Sieweke"
       block that was in the Google Sites draft (referee names do not belong
       on a public page)

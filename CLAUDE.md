@@ -123,9 +123,12 @@ instructions do not apply here.
   Quarto renders a placeholder, which the post-render script replaces in
   `docs/publications.html`. The in-press article's year and status come from
   the BibTeX record.
-- `files/vargas-aguilar_cv.pdf` is the public copy of Stephanie's September
-  2026 CV. Quarto copies it to `docs/files/` during render; keep the stable
-  URL when replacing the PDF.
+- `files/vargas-aguilar_cv.pdf` is the public copy of Stephanie's October
+  2026 CV ("Vargas_CV_2026 for webpage.pdf", supplied 2026-10-02; it
+  replaced the September 2026 version). Quarto copies it to `docs/files/`
+  during render; keep the stable URL when replacing the PDF. The October CV
+  lists her position as Instructor (2025–present; Postdoctoral Fellow
+  2020–2025) and adds an "Other scholarly publications" section.
 - `post-render.sh` — builds publication cards and handles the custom-domain
   CNAME switch. The former citeproc bolding repair is retained there as a
   comment; the publication generator now marks up Stephanie's name.
