@@ -38,9 +38,16 @@ instructions do not apply here.
    `docs/site_libs/` holds Bootstrap CSS/JS and Bootstrap Icons; every page
    references them by relative path. If it goes missing the site loses all
    styling.
-3. **After rendering, check `git status`.** Deletions under
-   `docs/site_libs/` mean the render did not complete — recover with
-   `git checkout -- docs/site_libs/` and re-render. Do not commit that state.
+3. **After rendering, check `git status`.** If `docs/site_libs/` loses a
+   file the rendered pages still reference (`bootstrap.min.js`,
+   `bootstrap-icons.css`, or the single hashed `bootstrap-<hash>.min.css`
+   named in `docs/*.html`), the render did not complete — recover with
+   `git checkout -- docs/site_libs/` and re-render; do not commit that
+   state. Deletion of *stale* hashed `bootstrap-<hash>.min.css` copies that
+   no page references is normal: Quarto renames the hash whenever
+   `styles.scss` changes and may remove the old copies (observed
+   2026-10-02 with Quarto 1.9.36). Check with
+   `grep -oh 'bootstrap-[0-9a-f]*\.min\.css' docs/*.html | sort -u`.
 4. **Verify the rendered HTML contains your change** before committing, e.g.
    after editing `research.qmd`, grep `docs/research.html` for new text.
 5. **LF line endings**, not CRLF.
