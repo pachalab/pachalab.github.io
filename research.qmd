@@ -6,13 +6,6 @@ sidebar: contact-profiles
 
 ## Current work
 
-Why do several mammalian tissues regenerate early in life yet lose this capacity
-soon after birth? Most explanations for the closure of this regenerative window
-have focused on maturation of the injured tissue itself: changes in
-proliferative capacity, metabolism, or extracellular matrix. Yet the immune
-system is undergoing an equally dramatic transformation during this same
-period, and its contribution to regenerative decline remains underappreciated.
-
 The mammalian heart is among the tissues that can regenerate shortly after birth
 but lose this capacity within the first week of life. My postdoctoral work
 revealed that successful cardiac regeneration depends on active,

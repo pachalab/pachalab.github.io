@@ -61,9 +61,12 @@ instructions do not apply here.
   the enclosing div's classes and the heading colour then leaks onto every
   paragraph inside, and a leading `h1` is hoisted into Quarto's title-block
   header, out of the layout. Use spans with classes, as it does now.
-- `about.qmd` — currently shows "In Progress" beside Stephanie's portrait;
-  the previous bio remains in Git history pending her review. `contact.qmd`
-  holds the email address; the CV remains available from the navbar.
+- `about.qmd` — a six-paragraph first-person bio beside Stephanie's portrait,
+  supplied on 2026-10-02 (opening question, the regenerative-window framing,
+  current research in the Olson lab, training, methods and funding, and
+  international outlook). It replaced the "In Progress" placeholder; the
+  earlier draft bio remains in Git history. `contact.qmd` holds the email
+  address; the CV remains available from the navbar.
 - Hero mechanics live in `styles.scss` under `body:has(.hero)`: a flex
   layout replaces Quarto's article grid and its empty 60px bottom row;
   the empty title block and footer are suppressed. The home page fills
@@ -95,9 +98,12 @@ instructions do not apply here.
   narrower box, so the left edge stays in register with the headings.
   Target `section > p`, not `main > p` — Quarto wraps content in
   `<section class="level2">`.
-- `research.qmd` — a two-paragraph current-work narrative supplied by Elías
-  on 2026-09-29, followed by research funding; separate from the publication
-  list and still pending Stephanie's review.
+- `research.qmd` — a one-paragraph current-work narrative (neonatal heart,
+  PD-1/PD-L1, γδT17 cells, IL-17A) supplied by Elías on 2026-09-29, followed
+  by research funding; separate from the publication list and still pending
+  Stephanie's review. Its former opening paragraph (the regenerative-window
+  question) moved to `about.qmd` on 2026-10-02 to avoid repetition; more
+  research text is planned.
 - `publications.qmd` — eight compact publication entries generated from
   `stefi.bib` by `scripts/build_publications.py` after rendering. The
   title is a modest linked heading, followed by an author line and a line

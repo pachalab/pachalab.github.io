@@ -89,9 +89,12 @@ The site's draft prose was based on `Vargas_CV_July2025.pdf` and checked
 against `Vargas_CV_2026.pdf`. Elías supplied the current Research-page text on
 2026-09-29. Nothing should be treated as final until Stephanie has read it.
 
-- [ ] Stephanie to review or supply About-page content before replacing the
-      current "In Progress" placeholder.
-- [ ] The two "Current work" paragraphs on the research page
+- [x] About-page text supplied on 2026-10-02 and published in place of the
+      "In Progress" placeholder; it opens with the regenerative-window
+      question formerly at the top of the research page.
+- [ ] The remaining "Current work" paragraph on the research page (the
+      opening paragraph moved to About on 2026-10-02; Elías plans to add
+      more research text)
 - [ ] Confirm the omission of the "References: Eric Olson, Michael Sieweke"
       block that was in the Google Sites draft (referee names do not belong
       on a public page)
