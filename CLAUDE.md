@@ -106,12 +106,12 @@ instructions do not apply here.
   narrower box, so the left edge stays in register with the headings.
   Target `section > p`, not `main > p` — Quarto wraps content in
   `<section class="level2">`.
-- `research.qmd` — a one-paragraph current-work narrative (neonatal heart,
-  PD-1/PD-L1, γδT17 cells, IL-17A) supplied by Elías on 2026-09-29, followed
-  by research funding; separate from the publication list and still pending
-  Stephanie's review. Its former opening paragraph (the regenerative-window
-  question) moved to `about.qmd` on 2026-10-02 to avoid repetition; more
-  research text is planned.
+- `research.qmd` — "Current work" has two bold-titled project paragraphs
+  supplied on 2026-10-05: PD-1–PD-L1 signaling (title links to the 2024
+  *Nature Cardiovascular Research* DOI) and the γδT17–IL-17A axis (in press
+  at *Cell Reports*). "Active funding" lists only the current AHA Career
+  Development Award; the completed 2022–2024 AHA grant (No. 916883) was
+  dropped then and remains in Git history. Still pending Stephanie's review.
 - `publications.qmd` — eight compact publication entries generated from
   `stefi.bib` by `scripts/build_publications.py` after rendering. The
   title is a modest linked heading, followed by an author line and a line
