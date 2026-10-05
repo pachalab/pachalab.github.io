@@ -71,9 +71,9 @@ instructions do not apply here.
 - `about.qmd` — a five-paragraph first-person bio beside Stephanie's portrait,
   supplied on 2026-10-02 (opening question, the regenerative-window framing,
   current research in the Olson lab, methods and funding, and international
-  outlook). The training paragraph (Germany/France, PhD with Michael Sieweke)
-  was removed on 2026-10-05 at her request. It replaced the "In Progress" placeholder; the
-  earlier draft bio remains in Git history. `contact.qmd` holds the email
+  outlook). It replaced the "In Progress" placeholder. A training paragraph
+  (Germany/France, PhD with Michael Sieweke) was removed on 2026-10-05; it and
+  the earlier draft bio remain in Git history. `contact.qmd` holds the email
   address; the CV remains available from the navbar.
 - Hero mechanics live in `styles.scss` under `body:has(.hero)`: a flex
   layout replaces Quarto's article grid and its empty 60px bottom row;
