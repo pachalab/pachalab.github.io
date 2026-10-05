@@ -68,10 +68,11 @@ instructions do not apply here.
   the enclosing div's classes and the heading colour then leaks onto every
   paragraph inside, and a leading `h1` is hoisted into Quarto's title-block
   header, out of the layout. Use spans with classes, as it does now.
-- `about.qmd` — a six-paragraph first-person bio beside Stephanie's portrait,
+- `about.qmd` — a five-paragraph first-person bio beside Stephanie's portrait,
   supplied on 2026-10-02 (opening question, the regenerative-window framing,
-  current research in the Olson lab, training, methods and funding, and
-  international outlook). It replaced the "In Progress" placeholder; the
+  current research in the Olson lab, methods and funding, and international
+  outlook). The training paragraph (Germany/France, PhD with Michael Sieweke)
+  was removed on 2026-10-05 at her request. It replaced the "In Progress" placeholder; the
   earlier draft bio remains in Git history. `contact.qmd` holds the email
   address; the CV remains available from the navbar.
 - Hero mechanics live in `styles.scss` under `body:has(.hero)`: a flex
