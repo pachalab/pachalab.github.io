@@ -7,6 +7,7 @@ sidebar: contact-profiles
 ## Current work
 
 **[PD-1–PD-L1 signaling in neonatal heart regeneration](https://doi.org/10.1038/s44161-024-00447-7)**
+(2024, *Nature Cardiovascular Research* 3(3), 389–402)
 
 In this work, I show that the PD-1–PD-L1 immune checkpoint pathway is highly
 active in the neonatal heart and is required for successful regeneration after
