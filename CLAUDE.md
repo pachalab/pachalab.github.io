@@ -108,8 +108,8 @@ instructions do not apply here.
   `<section class="level2">`.
 - `research.qmd` — "Current work" has two bold-titled project paragraphs
   supplied on 2026-10-05: PD-1–PD-L1 signaling (title links to the 2024
-  *Nature Cardiovascular Research* DOI) and the γδT17–IL-17A axis (in press
-  at *Cell Reports*). "Active funding" lists only the current AHA Career
+  *Nature Cardiovascular Research* DOI) and the γδT17–IL-17A axis (published
+  in *Cell Reports* 45(10), 118100, linked to its DOI). "Active funding" lists only the current AHA Career
   Development Award; the completed 2022–2024 AHA grant (No. 916883) was
   dropped then and remains in Git history. Still pending Stephanie's review.
 - `publications.qmd` — eight compact publication entries generated from
@@ -122,8 +122,9 @@ instructions do not apply here.
   List every author except on the 2023 *Cell Reports* and 2020 *Nature
   Immunology* entries, which retain seven authors followed by "et al."
   Quarto renders a placeholder, which the post-render script replaces in
-  `docs/publications.html`. The in-press article's year and status come from
-  the BibTeX record.
+  `docs/publications.html`. The 2026 article's final DOI and publication
+  details come from the BibTeX record; its original `inpress` citation key is
+  retained for stable references.
 - `files/vargas-aguilar_cv.pdf` is the public copy of Stephanie's October
   2026 CV ("Vargas_CV_2026 for webpage.pdf", supplied 2026-10-02; it
   replaced the September 2026 version). Quarto copies it to `docs/files/`
@@ -174,7 +175,7 @@ instructions do not apply here.
 ```bash
 quarto render
 grep -c 'class="publication-entry"' docs/publications.html          # 8
-grep -o 'doi.org/[^"<]*' docs/publications.html | head -1            # …s44161-024-00447-7
+grep -o 'doi.org/[^"<]*' docs/publications.html | head -1            # …j.celrep.2026.118100
 grep -o '<strong>\(Vargas \)\?Aguilar, S[^<]*</strong>' docs/publications.html | wc -l
 cmp _CNAME docs/CNAME                                                 # after the custom-domain cut-over
 ```

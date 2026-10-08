@@ -16,8 +16,8 @@ These findings establish that neonatal heart regeneration does not simply occur
 in the setting of an immature immune system, but instead depends on active
 immune regulation that keeps the injury response compatible with regeneration.
 
-**A γδT17–IL-17A axis supports neonatal heart regeneration** (manuscript
-currently in press at *Cell Reports*)
+**[A γδT17–IL-17A axis supports neonatal heart regeneration](https://doi.org/10.1016/j.celrep.2026.118100)**
+(2026, *Cell Reports* 45(10), 118100)
 
 In this work, I characterize a population of γδT17 cells that accumulates in
 the injured heart specifically during the regenerative window and promotes
